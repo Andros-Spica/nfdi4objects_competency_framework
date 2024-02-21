@@ -1,0 +1,12 @@
+# Competency area 2: Data Processing
+
+## Domain 1: Data entry
+
+## Domain 2: Data cleaning
+
+## Domain 3: Data validation
+
+## Domain 4: Data verification
+
+## Domain 5: Data transformation
+

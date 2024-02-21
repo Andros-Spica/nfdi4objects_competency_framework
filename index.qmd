@@ -1,0 +1,14 @@
+*Research Data Management Competency Framework for the Research Data Infrastructure for the Material Remains of Human History (NFDI4OBJECTS)*
+
+# Foreword {.unnumbered}
+
+
+
+# Acknowledgements {.unnumbered}
+
+
+
+# Abbreviations {.unnumbered}
+
+- **GIS**   Geographical Information Systems
+- **RDA**   Research Data Management

@@ -1,0 +1,40 @@
+project:
+  type: book
+  output-dir: public
+
+book:
+  title: "NFDI4OBJECTS Research Data Management Competency Framework"
+  author: "NFDI4OBJECTS-TA6 team"
+  date: today
+  date-format: DD MMMM, YYYY
+  page-navigation: true
+  site-url: https://gitlab.rlp.net/n4o/competence_framework/
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - part: "Current state"
+      chapters:
+      - current-state-overview.qmd
+      - catalogue.qmd
+      - analysis.qmd
+    - part: "NFDI4OBJECTS Competency framework"
+      chapters:
+        - framework.qmd
+        - area-1.qmd
+        - area-2.qmd
+        - area-3.qmd
+        - area-4.qmd
+        - attitudes.qmd
+    - recommendations.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: lumen
+  pdf:
+    documentclass: scrreprt
+
+
+
