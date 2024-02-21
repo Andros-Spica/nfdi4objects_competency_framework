@@ -1,0 +1,20 @@
+# Competency area 1: Data Generation
+
+## Domain 1: Data management planning
+
+### Learner-Beginner
+
+### Novice
+
+### Intermediate
+
+### Independent
+
+### Master-Expert
+
+## Domain 2: Data creation
+
+## Domain 3: Data collection
+
+## Domain 4: Data maintenance
+
