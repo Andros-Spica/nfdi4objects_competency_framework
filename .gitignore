@@ -1,0 +1,4 @@
+# ignore generated website
+public/
+
+/.quarto/

@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: public
 
 book:
   title: "NFDI4OBJECTS Research Data Management Competency Framework"
@@ -7,6 +8,7 @@ book:
   date: today
   date-format: DD MMMM, YYYY
   page-navigation: true
+  site-url: https://gitlab.rlp.net/n4o/competence_framework/
   chapters:
     - index.qmd
     - intro.qmd
