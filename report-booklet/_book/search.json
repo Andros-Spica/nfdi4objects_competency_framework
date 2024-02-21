@@ -1,0 +1,316 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "NFDI4OBJECTS Research Data Management Competency Framework",
+    "section": "",
+    "text": "Research Data Management Competency Framework for the Research Data Infrastructure for the Material Remains of Human History (NFDI4OBJECTS)\n\nForeword\n\n\nAcknowledgements\n\n\nAbbreviations\n\nGIS Geographical Information Systems\nRDA Research Data Management",
+    "crumbs": [
+      "Foreword"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "1.1 Background\nThis is a book created from markdown and executable code.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#objective",
+    "href": "intro.html#objective",
+    "title": "1  Introduction",
+    "section": "1.2 Objective",
+    "text": "1.2 Objective",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#target-audiences",
+    "href": "intro.html#target-audiences",
+    "title": "1  Introduction",
+    "section": "1.3 Target audiences",
+    "text": "1.3 Target audiences",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "catalogue.html",
+    "href": "catalogue.html",
+    "title": "3  Catalogue of existing courses and trainee programmes",
+    "section": "",
+    "text": "3.1 Data sources",
+    "crumbs": [
+      "Current state",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Catalogue of existing courses and trainee programmes</span>"
+    ]
+  },
+  {
+    "objectID": "catalogue.html#data-sources",
+    "href": "catalogue.html#data-sources",
+    "title": "3  Catalogue of existing courses and trainee programmes",
+    "section": "",
+    "text": "“IANUS - Forschungsdatenzentrum Archäologie & Altertumswissenschaften” (n.d.)\nSchmidt (2024)\n\n\n\n\n\n“IANUS - Forschungsdatenzentrum Archäologie & Altertumswissenschaften.” n.d. Accessed February 20, 2024. https://ianus-fdz.de/lehrangebote/.\n\n\nSchmidt, Sophie C. 2024. “SCSchmidt/ArchIT-LV_analysis: Preprint.” Zenodo. https://doi.org/10.5281/zenodo.10498365.",
+    "crumbs": [
+      "Current state",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Catalogue of existing courses and trainee programmes</span>"
+    ]
+  },
+  {
+    "objectID": "framework.html",
+    "href": "framework.html",
+    "title": "5  Framework structure and components",
+    "section": "",
+    "text": "5.1 Areas",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Framework structure and components</span>"
+    ]
+  },
+  {
+    "objectID": "framework.html#domains",
+    "href": "framework.html#domains",
+    "title": "5  Framework structure and components",
+    "section": "5.2 Domains",
+    "text": "5.2 Domains",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Framework structure and components</span>"
+    ]
+  },
+  {
+    "objectID": "framework.html#levels",
+    "href": "framework.html#levels",
+    "title": "5  Framework structure and components",
+    "section": "5.3 Levels",
+    "text": "5.3 Levels\n\n5.3.1 Learner-Beginner\n\nFundamental awareness. You have a common knowledge or an understanding of basic techniques and concepts.\n\n\n\n5.3.2 Novice\n\nYou have the level of experience gained in a classroom and/or experimental scenarios or as a trainee on-the-job. You are expected to need help when performing this skill.\n\n\nFocus on developing through on-the-job experience; You understand and can discuss terminology, concepts, principles and issues related to this competency; You utilize the full range of reference and resource materials in this competency.\n\n\n\n5.3.3 Intermediate\n\nYou are able to successfully complete tasks in this competency as requested. Help from an expert may be required from time to time, but you can usually perform the skill independently.\n\n\nFocus is on applying and enhancing knowledge or skill; You have applied this competency to situations occasionally while needing minimal guidance to perform successfully; You understand and can discuss the application and implications of changes to processes, policies, and procedures in this area.\n\n\n\n5.3.4 Independent\n\nYou can perform the actions associated with this skill without assistance. You are certainly recognized within your immediate organization as “a person to ask” when difficult questions arise regarding this skill.\n\n\nFocus is on broad organizational/professional issues; You have consistently provided practical/relevant ideas and perspectives on process or practice improvements which may easily be implemented; You are capable of coaching others in the application of this competency by translating complex nuances relating to this competency into easy to understand terms; You participate in senior level discussions regarding this competency; You assist in the development of reference and resource materials in this competency.\n\n\n\n5.3.5 Master-Expert\n\nYou are known as an expert in this area. You can provide guidance, troubleshoot and answer questions related to this area of expertise and the field where the skill is used.\n\n\nFocus is strategic; You have demonstrated consistent excellence in applying this competency across multiple projects and/or organizations; You are considered the “go to” person in this area within NIH and/or outside organizations; You create new applications for and/or lead the development of reference and resource materials for this competency; You are able to diagram or explain the relevant process elements and issues in relation to organizational issues and trends in sufficient detail during discussions and presentations, to foster a greater understanding among internal and external colleagues and constituents.",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Framework structure and components</span>"
+    ]
+  },
+  {
+    "objectID": "framework.html#sources",
+    "href": "framework.html#sources",
+    "title": "5  Framework structure and components",
+    "section": "5.4 Sources:",
+    "text": "5.4 Sources:\n\nData, Strategy and Innovation (DSI), Health Information and Intelligence (HII), WHO Western Pacific (n.d.)\n\nSchüller, Busch ·, and Hindinger (2019)\n“Competencies Proficiency Scale” (2017)\nPetersen et al. (2023)\n\n\n\n\n\n“Competencies Proficiency Scale.” 2017. Text. National Institutes of Health, Office of Human Resources. https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale.\n\n\nData, Strategy and Innovation (DSI), Health Information and Intelligence (HII), WHO Western Pacific. n.d. Data Management Competency Framework. Edited by World Health Organization. Regional Office for the Western Pacific. World Health Organization. Accessed February 20, 2024. https://www.who.int/publications-detail-redirect/9789290620099.\n\n\nPetersen, Britta, Claudia Engelhardt, Tanja Hörner, Juliane Jacob, Tatiana Kvetnaya, Andreas Mühlichen, Hermann Schranzhofer, et al. 2023. “Lernzielmatrix Zum Themenbereich Forschungsdatenmanagement (FDM) Für Die Zielgruppen Studierende, PhDs Und Data Stewards.” Zenodo. https://doi.org/10.5281/zenodo.8010617.\n\n\nSchüller, Katharina, Paulina Busch ·, and Carina Hindinger. 2019. “Future Skills: Ein Framework Für Data Literacy.” Zenodo. https://doi.org/10.5281/zenodo.3349865.",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Framework structure and components</span>"
+    ]
+  },
+  {
+    "objectID": "area-1.html",
+    "href": "area-1.html",
+    "title": "6  Competency area 1: Data Generation",
+    "section": "",
+    "text": "6.1 Domain 1: Data management planning",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Competency area 1: Data Generation</span>"
+    ]
+  },
+  {
+    "objectID": "area-1.html#domain-1-data-management-planning",
+    "href": "area-1.html#domain-1-data-management-planning",
+    "title": "6  Competency area 1: Data Generation",
+    "section": "",
+    "text": "6.1.1 Learner-Beginner\n\n\n6.1.2 Novice\n\n\n6.1.3 Intermediate\n\n\n6.1.4 Independent\n\n\n6.1.5 Master-Expert",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Competency area 1: Data Generation</span>"
+    ]
+  },
+  {
+    "objectID": "area-1.html#domain-2-data-creation",
+    "href": "area-1.html#domain-2-data-creation",
+    "title": "6  Competency area 1: Data Generation",
+    "section": "6.2 Domain 2: Data creation",
+    "text": "6.2 Domain 2: Data creation",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Competency area 1: Data Generation</span>"
+    ]
+  },
+  {
+    "objectID": "area-1.html#domain-3-data-collection",
+    "href": "area-1.html#domain-3-data-collection",
+    "title": "6  Competency area 1: Data Generation",
+    "section": "6.3 Domain 3: Data collection",
+    "text": "6.3 Domain 3: Data collection",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Competency area 1: Data Generation</span>"
+    ]
+  },
+  {
+    "objectID": "area-1.html#domain-4-data-maintenance",
+    "href": "area-1.html#domain-4-data-maintenance",
+    "title": "6  Competency area 1: Data Generation",
+    "section": "6.4 Domain 4: Data maintenance",
+    "text": "6.4 Domain 4: Data maintenance",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Competency area 1: Data Generation</span>"
+    ]
+  },
+  {
+    "objectID": "area-2.html",
+    "href": "area-2.html",
+    "title": "7  Competency area 2: Data Processing",
+    "section": "",
+    "text": "7.1 Domain 1: Data entry",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Competency area 2: Data Processing</span>"
+    ]
+  },
+  {
+    "objectID": "area-2.html#domain-2-data-cleaning",
+    "href": "area-2.html#domain-2-data-cleaning",
+    "title": "7  Competency area 2: Data Processing",
+    "section": "7.2 Domain 2: Data cleaning",
+    "text": "7.2 Domain 2: Data cleaning",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Competency area 2: Data Processing</span>"
+    ]
+  },
+  {
+    "objectID": "area-2.html#domain-3-data-validation",
+    "href": "area-2.html#domain-3-data-validation",
+    "title": "7  Competency area 2: Data Processing",
+    "section": "7.3 Domain 3: Data validation",
+    "text": "7.3 Domain 3: Data validation",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Competency area 2: Data Processing</span>"
+    ]
+  },
+  {
+    "objectID": "area-2.html#domain-4-data-verification",
+    "href": "area-2.html#domain-4-data-verification",
+    "title": "7  Competency area 2: Data Processing",
+    "section": "7.4 Domain 4: Data verification",
+    "text": "7.4 Domain 4: Data verification",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Competency area 2: Data Processing</span>"
+    ]
+  },
+  {
+    "objectID": "area-2.html#domain-5-data-transformation",
+    "href": "area-2.html#domain-5-data-transformation",
+    "title": "7  Competency area 2: Data Processing",
+    "section": "7.5 Domain 5: Data transformation",
+    "text": "7.5 Domain 5: Data transformation",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Competency area 2: Data Processing</span>"
+    ]
+  },
+  {
+    "objectID": "area-3.html",
+    "href": "area-3.html",
+    "title": "8  Competency area 3: Data Analysis",
+    "section": "",
+    "text": "8.1 Domain 1: Descriptive analysis",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Competency area 3: Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "area-3.html#domain-2-diagnostic-analysis",
+    "href": "area-3.html#domain-2-diagnostic-analysis",
+    "title": "8  Competency area 3: Data Analysis",
+    "section": "8.2 Domain 2: Diagnostic analysis",
+    "text": "8.2 Domain 2: Diagnostic analysis",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Competency area 3: Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "area-3.html#domain-3-predictive-analysis",
+    "href": "area-3.html#domain-3-predictive-analysis",
+    "title": "8  Competency area 3: Data Analysis",
+    "section": "8.3 Domain 3: Predictive analysis",
+    "text": "8.3 Domain 3: Predictive analysis",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Competency area 3: Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "area-3.html#domain-4-prescriptive-analysis",
+    "href": "area-3.html#domain-4-prescriptive-analysis",
+    "title": "8  Competency area 3: Data Analysis",
+    "section": "8.4 Domain 4: Prescriptive analysis",
+    "text": "8.4 Domain 4: Prescriptive analysis",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Competency area 3: Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "area-4.html",
+    "href": "area-4.html",
+    "title": "9  Competency area 4: Data Usage",
+    "section": "",
+    "text": "9.1 Domain 1: Data interpretation and conclusion",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Competency area 4: Data Usage</span>"
+    ]
+  },
+  {
+    "objectID": "area-4.html#domain-2-data-integration",
+    "href": "area-4.html#domain-2-data-integration",
+    "title": "9  Competency area 4: Data Usage",
+    "section": "9.2 Domain 2: Data integration",
+    "text": "9.2 Domain 2: Data integration",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Competency area 4: Data Usage</span>"
+    ]
+  },
+  {
+    "objectID": "area-4.html#domain-3-data-presentation-and-reporting",
+    "href": "area-4.html#domain-3-data-presentation-and-reporting",
+    "title": "9  Competency area 4: Data Usage",
+    "section": "9.3 Domain 3: Data presentation and reporting",
+    "text": "9.3 Domain 3: Data presentation and reporting",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Competency area 4: Data Usage</span>"
+    ]
+  },
+  {
+    "objectID": "area-4.html#domain-4-transfer-to-action-oriented-recommendations",
+    "href": "area-4.html#domain-4-transfer-to-action-oriented-recommendations",
+    "title": "9  Competency area 4: Data Usage",
+    "section": "9.4 Domain 4: Transfer to action-oriented recommendations",
+    "text": "9.4 Domain 4: Transfer to action-oriented recommendations",
+    "crumbs": [
+      "NFDI4OBJECTS Competency framework",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Competency area 4: Data Usage</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "“Competencies Proficiency Scale.”\n2017. Text. National Institutes of Health, Office of Human\nResources. https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale.\n\n\nData, Strategy and Innovation (DSI), Health Information and Intelligence\n(HII), WHO Western Pacific. n.d. Data Management Competency\nFramework. Edited by World Health Organization. Regional Office for\nthe Western Pacific. World Health Organization. Accessed February 20,\n2024. https://www.who.int/publications-detail-redirect/9789290620099.\n\n\n“IANUS - Forschungsdatenzentrum\nArchäologie &\nAltertumswissenschaften.” n.d. Accessed February 20,\n2024. https://ianus-fdz.de/lehrangebote/.\n\n\nPetersen, Britta, Claudia Engelhardt, Tanja Hörner, Juliane Jacob,\nTatiana Kvetnaya, Andreas Mühlichen, Hermann Schranzhofer, et al. 2023.\n“Lernzielmatrix Zum Themenbereich\nForschungsdatenmanagement (FDM) Für Die\nZielgruppen Studierende, PhDs Und\nData Stewards.” Zenodo. https://doi.org/10.5281/zenodo.8010617.\n\n\nSchmidt, Sophie C. 2024.\n“SCSchmidt/ArchIT-LV_analysis:\nPreprint.” Zenodo. https://doi.org/10.5281/zenodo.10498365.\n\n\nSchüller, Katharina, Paulina Busch ·, and Carina Hindinger. 2019.\n“Future Skills: Ein\nFramework Für Data\nLiteracy.” Zenodo. https://doi.org/10.5281/zenodo.3349865.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]
