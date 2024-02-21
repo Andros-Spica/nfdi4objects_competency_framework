@@ -1,0 +1,1 @@
+# NFDI4Objects Kompetenzrahmen Forschungsdatenmanagement
