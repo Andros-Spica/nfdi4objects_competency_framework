@@ -10,6 +10,7 @@ before_script:
   - dpkg -i ./quarto.deb && rm -f ./quarto.deb
   - quarto install --no-prompt extension quarto-ext/lightbox
   - quarto install tinytex
+  - apt-get install libfontconfig
 
 pages:
   script:
