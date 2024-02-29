@@ -8,7 +8,7 @@
 
 (REFER TO FULL WEBSITE)
 
-See booklet: [HTML]([report-booklet/public/index.html](https://competence-framework-n4o-7c7c64d0bbb35694ddaddfe5275cdcd10ea892.pages.gitlab.rlp.net/)
+See booklet: [HTML](https://competence-framework-n4o-7c7c64d0bbb35694ddaddfe5275cdcd10ea892.pages.gitlab.rlp.net/)
 
 ## References
 
