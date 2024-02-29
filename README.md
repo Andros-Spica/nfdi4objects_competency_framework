@@ -8,7 +8,7 @@
 
 (REFER TO FULL WEBSITE)
 
-See booklet: [HTML](report-booklet/_book/index.html) | [PDF](report-booklet/_book/Research-Data-Management-Competency-Framework-for-the-Material-Remains-of-Human-History--NFDI4OBJECTS-.pdf)
+See booklet: [HTML](report-booklet/public/index.html) | [PDF](report-booklet/public/Research-Data-Management-Competency-Framework-for-the-Material-Remains-of-Human-History--NFDI4OBJECTS-.pdf)
 
 ## References
 

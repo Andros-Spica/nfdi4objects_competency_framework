@@ -12,7 +12,7 @@ before_script:
 
 pages:
   script:
-    - quarto render . --to html --output-dir=public/
+    - quarto render . --to all --output-dir=public/
   artifacts:
     paths:
       - public/
