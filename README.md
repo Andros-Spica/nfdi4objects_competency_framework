@@ -68,7 +68,7 @@ Contributors (in alphabetical order by first name). Collectively the "NFDI4OBJEC
 
 - Angourakis, Andreas (Ruhr-University Bochum and University of Cologne)
 - Klingenberg, Tim (Ruhr-University Bochum)
-- Linde, Lennart (Johannes Gutenberg University Mainz)
+- Linde, Lennart (Hochschule Mainz)
 
 ## Contact
 
