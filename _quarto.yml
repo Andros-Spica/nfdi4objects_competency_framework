@@ -2,6 +2,10 @@ project:
   type: book
   output-dir: public
 
+execute: 
+  echo: false
+  warning: false
+
 book:
   title: "NFDI4OBJECTS Research Data Management Competency Framework"
   author: "NFDI4OBJECTS-TA6 team"
