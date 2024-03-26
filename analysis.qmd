@@ -1,2 +1,91 @@
 # Analysis
 
+```{r, echo=FALSE}
+directory = "data/lehrangebote"
+```
+```{r, echo=FALSE}
+source(file = "source/IANUS_loadJSONs.R")
+
+ianus <- IANUS_loadJSONs(directory = directory)
+ianus <- as.data.frame(ianus)
+```
+
+```{r, echo=FALSE}
+library(wordcloud)
+
+# Initialize an empty list to store the results
+keyword_list <- list()
+
+# Iterate over each element in ianus$Inhalte
+for (content in ianus$Inhalte) {
+  # Split the content by ", " and store the result
+  keywords <- strsplit(content, ", ")
+  
+  # Split each element in the result by ","
+  for (i in seq_along(keywords)) {
+    keywords[[i]] <- unlist(strsplit(keywords[[i]], ","))
+  }
+  
+  # Split each element in the result by "\n"
+  for (i in seq_along(keywords)) {
+    keywords[[i]] <- unlist(trimws(keywords[[i]], whitespace = "\n"))#strsplit(keywords[[i]], "\n"))
+  }
+  
+  keywords <- lapply(keywords, function(x) x[x != ""])
+  
+  # Append the processed keywords to the list
+  keyword_list <- c(keyword_list, list(keywords))
+}
+
+keywords <- do.call(rbind, keyword_list)
+keywords <- as.data.frame(keywords)
+
+rownames(keywords) <- ianus$id
+```
+
+```{r, echo=FALSE}
+keywords_unlisted <- unlist(keywords)
+keywords_unlisted <- keywords_unlisted[keywords_unlisted != "NA"]
+keyword_freq_sorted <- sort(table(keywords_unlisted), decreasing = TRUE)
+```
+
+```{r, echo=FALSE}
+# library(udpipe)
+# 
+# udpipe_download_model(language = "german-gsd")
+# 
+# udmodel_german <- udpipe_load_model(file = "german-gsd-ud-2.5-191206.udpipe")
+# 
+# annotated_data <- data.frame(udpipe_annotate(udmodel_german, unlist(ianus$Inhalte)))
+# annotated_data_nouns <- subset(annotated_data, upos %in% c("NOUN"))
+# nouns_frequency <- txt_freq(annotated_data_nouns$token)
+# 
+# wordcloud(words = nouns_frequency$key, freq = nouns_frequency$freq, max.words = 200)
+```
+
+
+```{r, echo=FALSE}
+keyword_top <- keyword_freq_sorted[1:30]
+
+par(mar = c(7, 4, 2, 2) + 0.2, cex.axis = 0.7)
+
+barplot(keyword_top, 
+        las = 2,
+        col ="lightblue", 
+        main ="Most frequent keywords (Inhalte)",
+        ylab = "Frequency",
+        xaxt="n", space = 1)
+
+end_point = 0.5 + nrow(keyword_top) + nrow(keyword_top) - 1
+
+text(seq(1.5, end_point, by = 2), par("usr")[3]-0.25, 
+     srt = 60, adj = 1, xpd = TRUE,
+     labels = paste(names(keyword_top)), cex = 0.65)
+```
+
+```{r, echo=FALSE}
+wordcloud(words = names(keyword_freq_sorted), freq = keyword_freq_sorted, min.freq = 1,
+          max.words=200, random.order=FALSE, rot.per=0.35, 
+          colors=brewer.pal(8, "Set1"))
+```
+
