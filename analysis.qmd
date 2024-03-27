@@ -83,9 +83,11 @@ text(seq(1.5, end_point, by = 2), par("usr")[3]-0.25,
      labels = paste(names(keyword_top)), cex = 0.65)
 ```
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, fig.height=6, fig.width=6}
+par(mar = rep(0, 4))
 wordcloud(words = names(keyword_freq_sorted), freq = keyword_freq_sorted, min.freq = 1,
           max.words=200, random.order=FALSE, rot.per=0.35, 
+          scale = c(3, .3),
           colors=brewer.pal(8, "Set1"))
 ```
 
