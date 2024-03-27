@@ -1,11 +1,11 @@
 variables:
   UBUNTU_VERSION: "22.04"
   QUARTO_VERSION: "1.3.361"
-  R_VERSION: "4.3.3" # You can modify this to the desired R version
+  R_VERSION: "4.2.2"
 
 image:
   name: r-base:${R_VERSION}
-  entrypoint: ["bash", "-c"]
+  entrypoint: ["/bin/bash", "-c"]
 
 before_script:
   - apt-get update && apt-get install -y curl
@@ -13,7 +13,7 @@ before_script:
   - curl -L -o quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb
   - dpkg -i quarto.deb && rm -f quarto.deb
   - quarto install --no-prompt extension quarto-ext/lightbox
-  - Rscript -e "install.packages(c('rmarkdown', 'jsonlite', 'readODS', 'wordcloud'), dependencies = TRUE)" # Add R packages here
+  - Rscript -e "install.packages(c('rmarkdown'), dependencies = TRUE)"
 
 pages:
   script:
