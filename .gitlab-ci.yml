@@ -7,7 +7,9 @@ image:
   name: "r-base:latest"
 
 before_script:
-  - echo "deb http://deb.debian.org/debian testing main" > /etc/apt/sources.list
+  - echo "deb http://deb.debian.org/debian testing main" > /etc/apt/sources.list.d/debian.sources
+  - echo "deb http://deb.debian.org/debian testing-updates main" >> /etc/apt/sources.list.d/debian.sources
+  - echo "deb http://deb.debian.org/debian-security testing-security main" >> /etc/apt/sources.list.d/debian.sources
   - apt-get update && apt-get install -y curl
   - apt-get install -y xorg-dev libgstreamer-plugins-base0.10-dev libgstreamer0.10-dev libjpeg-dev libusb-1.0-0-dev
   - curl -L -o quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb
