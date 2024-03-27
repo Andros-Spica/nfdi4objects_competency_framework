@@ -4,7 +4,7 @@ variables:
   R_VERSION: "4.2.2"
 
 image:
-  name: r-base:${R_VERSION}
+  name: "r-base:latest"
   entrypoint: ["/bin/bash", "-c"]
 
 before_script:
