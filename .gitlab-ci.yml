@@ -5,7 +5,6 @@ variables:
 
 image:
   name: "r-base:latest"
-  entrypoint: ["/bin/bash", "-c"]
 
 before_script:
   - apt-get update && apt-get install -y curl
