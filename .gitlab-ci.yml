@@ -7,7 +7,8 @@ image:
   name: "r-base:latest"
 
 before_script:
-  - apt-get update && apt-get install -y curl
+  - apt-get update
+  - apt-get install -y --no-install-recommends gcc libc6-dev libxml2-dev libcurl4-openssl-dev git curl
   - apt-get install -y xorg-dev libgstreamer-plugins-base0.10-dev libgstreamer0.10-dev libjpeg-dev libusb-1.0-0-dev
   - apt-get -q update
   - apt-get -y remove libcurl4t64
