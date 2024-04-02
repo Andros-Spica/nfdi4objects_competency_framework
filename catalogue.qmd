@@ -5,29 +5,61 @@ directory = "data/lehrangebote"
 ```
 
 ```{r, echo=FALSE}
+# Create (if needed) JSON files with IANUS data from spreadsheet (.ods)
 if (!dir.exists(directory))
 {
   # run only one time, to build JSON data entries from ods compilation
   source(file = "source/IANUS_odsToJSON.R")
   LV <- IANUS_prepareOds("data/IANUS-LV_alle.ods")
   
-  # TODO: load or add Data Lifecycle Manament tags
-  # Data creation.
-  # Data processing and storage.
-  # Data usage.
-  # Data archiving.
-  # Data destruction.
-
   IANUS_toJSON(LV, directory = directory, order.by = "Stadt")
 }
 ```
 
 ```{r, echo=FALSE}
+# Load IANUS data from JSON files
 source(file = "source/IANUS_loadJSONs.R")
 
 ianus <- IANUS_loadJSONs(directory = directory)
 ianus <- as.data.frame(ianus)
 ```
+
+```{r, echo=FALSE}
+# identify all content keywords
+source(file = "source/IANUS_catchKeywords.R")
+
+keywords <- IANUS_catchKeywords(ianus)
+keywords_unique <- unique(unlist(keywords))
+```
+
+```{r}
+# Assign Data Lifecycle Management* phase based on content keywords (Inhalte)
+# *Data creation, Data processing and storage, Data usage, Data archiving, Data destruction.
+
+dlm_phases <- c("Data creation", "Data processing and storage", "Data usage", "Data archiving", "Data destruction")
+
+keywordToDLM <- read.csv("data/keywordToDLM.csv")
+
+DLM <- as.list(rep(NA, length(keywords[[1]])))
+for (i in 1:length(keywords[[1]]))
+{
+  keywordSet <- keywords[[1]][[i]]
+  if (!is.na(keywordSet))
+  {
+    DLMset <- c()
+    for (keyword in keywordSet)
+    {
+      DLMselection <- keywordToDLM[keywordToDLM$IANUS.Inhalte == keyword, -1]
+      ### TODO
+      #DLMset <- c(DLMset, )
+    }
+    
+    DLM[[i]] <- c()
+  }
+}
+
+```
+
 
 ```{r, echo=FALSE}
 ianus_toDisplay <- ianus[, c(
