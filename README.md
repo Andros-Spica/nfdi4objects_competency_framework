@@ -1,6 +1,6 @@
 # NFDI4Objects Kompetenzrahmen Forschungsdatenmanagement
 
-*Research Data Management Competency Framework for the Research Data Infrastructure for the Material Remains of Human History (NFDI4OBJECTS) consortium*
+*Research Data Management Competency Framework for the Research Data Infrastructure for the Material Remains of Human History (NFDI4Objects) consortium*
 
 ## About
 
@@ -60,11 +60,11 @@ Please cite this work as follows:
 
 ## Acknowledgements
 
-This repository and the report it contains were developed as an activity of the Task Are 6, "NFDI4OBJECTS for Commons and Qualification", within the [Research Data Infrastructure for the Material Remains of Human History (NFDI4OBJECTS) consortium](https://www.nfdi4objects.net/).
+This repository and the report it contains were developed as an activity of the Task Are 6, "NFDI4Objects for Commons and Qualification", within the [Research Data Infrastructure for the Material Remains of Human History (NFDI4Objects) consortium](https://www.nfdi4objects.net/).
 
 ## Contributors
 
-Contributors (in alphabetical order by first name). Collectively the "NFDI4OBJECTS-TA6 team".
+Contributors (in alphabetical order by first name). Collectively the "NFDI4Oobjects-TA6 team".
 
 - Angourakis, Andreas (Ruhr-University Bochum and University of Cologne)
 - Klingenberg, Tim (Ruhr-University Bochum)
