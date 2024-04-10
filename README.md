@@ -48,7 +48,7 @@ Unless otherwise specified on particular materials, all material in this reposit
 Please cite this work as follows:
 
 ```{bibtex}
-@article{QualificationProfilesNFDI4OBJECTS,
+@article{QualificationProfilesNFDI4Objects,
   title={Qualification Profiles for Research Data Management on the Material Remains of Human History (NFDI4Objects)},
   author={NFDI4Objects-TA 6 team},
   journal={GitLab},
