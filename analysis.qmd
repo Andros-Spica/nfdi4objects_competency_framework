@@ -42,7 +42,7 @@ keywords <- as.data.frame(keywords)
 
 rownames(keywords) <- ianus$id
 ```
-
+  
 ```{r, echo=FALSE}
 keywords_unlisted <- unlist(keywords)
 keywords_unlisted <- keywords_unlisted[keywords_unlisted != "NA"]
