@@ -64,7 +64,7 @@ This repository and the report it contains were developed as an activity of the 
 
 ## Contributors
 
-Contributors (in alphabetical order by first name). Collectively the "NFDI4Oobjects-TA6 team".
+Contributors (in alphabetical order by first name). Collectively the "NFDI4Objects-TA6 team".
 
 - Angourakis, Andreas (Ruhr-University Bochum and University of Cologne)
 - Klingenberg, Tim (Ruhr-University Bochum)
