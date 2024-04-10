@@ -49,8 +49,8 @@ Please cite this work as follows:
 
 ```{bibtex}
 @article{QualificationProfilesNFDI4OBJECTS,
-  title={Qualification Profiles for Research Data Management on the Material Remains of Human History (NFDI4OBJECTS)},
-  author={NFDI4OBJECTS-TA6 team},
+  title={Qualification Profiles for Research Data Management on the Material Remains of Human History (NFDI4Objects)},
+  author={NFDI4Objects-TA 6 team},
   journal={GitLab},
   year={2024},
   doi={},
