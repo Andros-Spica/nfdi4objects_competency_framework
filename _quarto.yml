@@ -7,7 +7,7 @@ execute:
   warning: false
 
 book:
-  title: "NFDI4OBJECTS Research Data Management Competency Framework"
+  title: "NFDI4Objects Research Data Management Competency Framework"
   author: # vgl. https://quarto.org/docs/journals/authors.html
   - name: Jane Roe
     orcid: 0000-0000-0000-0000
@@ -41,7 +41,7 @@ book:
       - current-state-overview.qmd
       - catalogue.qmd
       - analysis.qmd
-    - part: "NFDI4OBJECTS Competency framework"
+    - part: "NFDI4Objects Competency framework"
       chapters:
         - framework.qmd
         - area-1.qmd
