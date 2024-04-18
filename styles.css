@@ -1,0 +1,27 @@
+
+.badge {
+  color: lightgrey;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#badgeDatacreation {
+  background-color: #58EFEC;
+}
+
+#badgeDataprocessingandstorage {
+  background-color: #7CCAD5;
+}
+
+#badgeDatausage {
+  background-color: #A0A6BE;
+}
+
+#badgeDataarchiving {
+  background-color: #C481A7;
+}
+
+#badgeDatadestruction {
+  background-color: #E85C90;
+}

@@ -1,15 +1,3 @@
-library(readODS)
-library(rjson)
-
-IANUS_prepareOds <- function(fileName)
-{
-  dataframe <- read_ods(fileName)
-  
-  dataframe$id <- seq.int(nrow(dataframe))
-  
-  return(dataframe)
-}
-
 IANUS_toJSON <- function(dataframe, directory, order.by = "Stadt")
 {
   dir.create(file.path(".", directory), showWarnings = FALSE)
@@ -27,8 +15,9 @@ IANUS_toJSON <- function(dataframe, directory, order.by = "Stadt")
     
     filePath <- file.path(".", directory, einrichtung, paste0(id, ".json"))
     
-    courseJSON <- toJSON(dataframe[i, ])
+    dataframe_row <- dataframe[i, ]
     
-    write(courseJSON, file = filePath)
+    # Write the JSON to file using write_json() function
+    jsonlite::write_json(dataframe_row, filePath, na = "null")
   }
 }

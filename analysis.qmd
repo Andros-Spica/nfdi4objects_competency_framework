@@ -3,78 +3,62 @@
 ```{r, echo=FALSE}
 directory = "data/lehrangebote"
 ```
+
 ```{r, echo=FALSE}
+# Load IANUS data from JSON files
 source(file = "source/IANUS_loadJSONs.R")
 
 ianus <- IANUS_loadJSONs(directory = directory)
-ianus <- as.data.frame(ianus)
 ```
 
 ```{r, echo=FALSE}
-library(wordcloud)
+# Add extra variables with processed keywords and DLM tags
+# identify all content keywords
+source(file = "source/IANUS_catchKeywords.R")
+ianus$Keywords <- IANUS_catchKeywords(ianus)
 
-# Initialize an empty list to store the results
-keyword_list <- list()
+keywords_unique <- unique(unlist(ianus$Keywords))
 
-# Iterate over each element in ianus$Inhalte
-for (content in ianus$Inhalte) {
-  # Split the content by ", " and store the result
-  keywords <- strsplit(content, ", ")
-  
-  # Split each element in the result by ","
-  for (i in seq_along(keywords)) {
-    keywords[[i]] <- unlist(strsplit(keywords[[i]], ","))
-  }
-  
-  # Split each element in the result by "\n"
-  for (i in seq_along(keywords)) {
-    keywords[[i]] <- unlist(trimws(keywords[[i]], whitespace = "\n"))#strsplit(keywords[[i]], "\n"))
-  }
-  
-  keywords <- lapply(keywords, function(x) x[x != ""])
-  
-  # Append the processed keywords to the list
-  keyword_list <- c(keyword_list, list(keywords))
-}
-
-keywords <- do.call(rbind, keyword_list)
-keywords <- as.data.frame(keywords)
-
-rownames(keywords) <- ianus$id
+# assign DLM tags according to keywords
+source(file = "source/IANUS_buildDLM.R")
+ianus$DLM <- IANUS_buildDLM(ianus$Keywords)
 ```
   
 ```{r, echo=FALSE}
-keywords_unlisted <- unlist(keywords)
+keywords_unlisted <- unlist(ianus$Keywords)
 keywords_unlisted <- keywords_unlisted[keywords_unlisted != "NA"]
 keyword_freq_sorted <- sort(table(keywords_unlisted), decreasing = TRUE)
 ```
 
 ```{r, echo=FALSE}
-# library(udpipe)
-# 
-# udpipe_download_model(language = "german-gsd")
-# 
-# udmodel_german <- udpipe_load_model(file = "german-gsd-ud-2.5-191206.udpipe")
-# 
-# annotated_data <- data.frame(udpipe_annotate(udmodel_german, unlist(ianus$Inhalte)))
-# annotated_data_nouns <- subset(annotated_data, upos %in% c("NOUN"))
-# nouns_frequency <- txt_freq(annotated_data_nouns$token)
-# 
-# wordcloud(words = nouns_frequency$key, freq = nouns_frequency$freq, max.words = 200)
+RDM_keywords <- c("Digitale Datenauswertung", "Digitale Dokumentation", "Datenbanken", 
+                  "Datenmanagement", "Metadaten", "Archivierung", "Datenkuratierung",
+                  "Online-Ressourcen", "Internet", "Webtechnologien", "Web-Kartierung", "Ausgrabungsdokumentation")
+
+is_RDM <- names(keyword_freq_sorted) %in% RDM_keywords
 ```
 
+IANUS content keywords considered as related to RDM competency:
 
-```{r, echo=FALSE}
-keyword_top <- keyword_freq_sorted[1:30]
+`RDM_keywords`
+
+```{r, echo=FALSE, fig.cap='Content keywords frequency'}
+cutThreshold = length(keyword_freq_sorted) # no cutting
+keyword_top <- keyword_freq_sorted[1:cutThreshold]
+keyword_top_RDM <- is_RDM[1:cutThreshold]
+
+colorSet <- c("lightblue","darkred")
 
 par(mar = c(7, 4, 2, 2) + 0.2, cex.axis = 0.7)
 
 barplot(keyword_top, 
         las = 2,
-        col ="lightblue", 
+        col = colorSet[keyword_top_RDM + 1], 
         main ="Most frequent keywords (Inhalte)",
         ylab = "Frequency",
         xaxt="n", space = 1)
+
+legend(length(keyword_top) * 0.8, max(keyword_top) * 0.8, legend = c("Non-RDM keyword", "RDM keyword"), fill = colorSet)
 
 end_point = 0.5 + nrow(keyword_top) + nrow(keyword_top) - 1
 
@@ -83,11 +67,23 @@ text(seq(1.5, end_point, by = 2), par("usr")[3]-0.25,
      labels = paste(names(keyword_top)), cex = 0.65)
 ```
 
-```{r, echo=FALSE, fig.height=6, fig.width=6}
+```{r, echo=FALSE, fig.height=6, fig.width=6, fig.cap='Wordcloud: all content keywords'}
+library(wordcloud) 
+
 par(mar = rep(0, 4))
 wordcloud(words = names(keyword_freq_sorted), freq = keyword_freq_sorted, min.freq = 1,
           max.words=200, random.order=FALSE, rot.per=0.35, 
           scale = c(3, .3),
+          colors=brewer.pal(8, "Set1"))
+```
+
+```{r, echo=FALSE, fig.height=6, fig.width=6, fig.cap='Wordcloud: RDM content keywords'}
+library(wordcloud) 
+
+par(mar = rep(0, 4))
+wordcloud(words = names(keyword_freq_sorted)[is_RDM], freq = keyword_freq_sorted[is_RDM], min.freq = 1,
+          max.words=200, random.order=FALSE, rot.per=0.35, 
+          scale = c(2, .3),
           colors=brewer.pal(8, "Set1"))
 ```
 
