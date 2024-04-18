@@ -38,6 +38,7 @@ format:
   html:
     theme: lumen
     fig-format: svg
+    css: styles.css
   pdf:
     documentclass: scrreprt
 

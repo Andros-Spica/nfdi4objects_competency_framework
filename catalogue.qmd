@@ -5,15 +5,18 @@ directory = "data/lehrangebote"
 ```
 
 ```{r, echo=FALSE}
-# Create (if needed) JSON files with IANUS data from spreadsheet (.ods)
+# run only one time, to build JSON data entries from ods compilation
+source(file = "source/IANUS_prepareODS.R")
+LV <- IANUS_prepareOds("data/IANUS-LV_alle.ods")
+
+# Create (update) JSON files with IANUS data from spreadsheet (.ods)
 if (!dir.exists(directory))
 {
-  # run only one time, to build JSON data entries from ods compilation
-  source(file = "source/IANUS_odsToJSON.R")
-  LV <- IANUS_prepareOds("data/IANUS-LV_alle.ods")
-  
-  IANUS_toJSON(LV, directory = directory, order.by = "Stadt")
+  file.remove(directory)
 }
+
+source(file = "source/IANUS_toJSON.R")
+IANUS_toJSON(LV, directory = directory, order.by = "Stadt")
 ```
 
 ```{r, echo=FALSE}
@@ -21,60 +24,63 @@ if (!dir.exists(directory))
 source(file = "source/IANUS_loadJSONs.R")
 
 ianus <- IANUS_loadJSONs(directory = directory)
-ianus <- as.data.frame(ianus)
 ```
 
 ```{r, echo=FALSE}
+# Add extra variables with processed keywords and DLM tags
 # identify all content keywords
 source(file = "source/IANUS_catchKeywords.R")
+ianus$Keywords <- IANUS_catchKeywords(ianus)
 
-keywords <- IANUS_catchKeywords(ianus)
-keywords_unique <- unique(unlist(keywords))
+keywords_unique <- unique(unlist(ianus$Keywords))
+
+# assign DLM tags according to keywords
+source(file = "source/IANUS_buildDLM.R")
+ianus$DLM <- IANUS_buildDLM(ianus$Keywords)
 ```
-
-```{r}
-# Assign Data Lifecycle Management* phase based on content keywords (Inhalte)
-# *Data creation, Data processing and storage, Data usage, Data archiving, Data destruction.
-
-dlm_phases <- c("Data creation", "Data processing and storage", "Data usage", "Data archiving", "Data destruction")
-
-keywordToDLM <- read.csv("data/keywordToDLM.csv")
-
-DLM <- as.list(rep(NA, length(keywords[[1]])))
-for (i in 1:length(keywords[[1]]))
-{
-  keywordSet <- keywords[[1]][[i]]
-  if (!is.na(keywordSet))
-  {
-    DLMset <- c()
-    for (keyword in keywordSet)
-    {
-      DLMselection <- keywordToDLM[keywordToDLM$IANUS.Inhalte == keyword, -1]
-      ### TODO
-      #DLMset <- c(DLMset, )
-    }
-    
-    DLM[[i]] <- c()
-  }
-}
-
-```
-
 
 ```{r, echo=FALSE}
 ianus_toDisplay <- ianus[, c(
-  "Einrichtung","Veranstaltungstitel", "Semester", 
-  "Veranstaltungstyp", "Zielgruppe", 
+  "Einrichtung","Veranstaltungstitel", "Semester" 
+  #"Veranstaltungstyp", "Zielgruppe", 
   #"Stadt", "Institut", "Studiengang/Modul",
   #"Lehrende", "Notiz",
-  #"Nachname", "Vorname", "Position",
-  "Inhalte"
+  #"Nachname", "Vorname", "Position"
   )]
-#ianus_toDisplay$Veranstaltungstitel <- paste0("<a href=\"", ianus$Link, ">", ianus_toDisplay$Veranstaltungstitel, "</a>")
+
+badge_series <- function(x, type = 'badgeDefault') {
+  if (!is.na(x[1])) {
+    modType = type
+    if (type == 'badgeDLM') {
+      modType = gsub(" ", "", x)
+    }
+    prefix <- paste0('<span class="badge" id="', modType, '">')
+    return(paste(prefix, x, '</span>', collapse = '&nbsp;'))
+  } else {
+    return('')
+  }
+}
+
+ianus_toDisplay$Keywords <- sapply(ianus$Keywords, badge_series)
+
+ianus_toDisplay$DLM <- sapply(ianus$DLM, badge_series, type = 'badgeDLM')
+
+linkToJSON <- paste0("https://gitlab.rlp.net/n4o/competence_framework/-/tree/main/", directory, "/", ianus$Stadt, "/", ianus$id, ".json")
+
+ianus_toDisplay$Veranstaltungstitel <- paste0("<a href=\"", linkToJSON, "\">", ianus_toDisplay$Veranstaltungstitel, "</a>")
 ```
 
 ```{r, echo=FALSE}
 library(DT)
+
+options(DT.options = list(
+  pageLength = 10, 
+  language = list(search = 'Search by Last update, Contributors, Title or keyword:'), 
+  initComplete = DT::JS(
+    "function(settings, json) {",
+    "$(this.api().table().header()).css({'background-color': '#03989e'});",
+    "}"
+  )))
 
 DT::datatable(ianus_toDisplay)
 ```
