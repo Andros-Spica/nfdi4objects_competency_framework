@@ -1,4 +1,4 @@
-# Catalogue of existing courses and trainee programmes
+# Existing courses and trainee programmes
 
 ```{r, echo=FALSE}
 directory = "data/lehrangebote"
@@ -55,7 +55,7 @@ badge_series <- function(x, type = 'badgeDefault') {
       modType = gsub(" ", "", x)
     }
     prefix <- paste0('<span class="badge" id="', modType, '">')
-    return(paste(prefix, x, '</span>', collapse = '&nbsp;'))
+    return(paste(prefix, x, '</span>', collapse = '<br>'))
   } else {
     return('')
   }
@@ -68,6 +68,8 @@ ianus_toDisplay$DLM <- sapply(ianus$DLM, badge_series, type = 'badgeDLM')
 linkToJSON <- paste0("https://gitlab.rlp.net/n4o/competence_framework/-/tree/main/", directory, "/", ianus$Stadt, "/", ianus$id, ".json")
 
 ianus_toDisplay$Veranstaltungstitel <- paste0("<a href=\"", linkToJSON, "\">", ianus_toDisplay$Veranstaltungstitel, "</a>")
+
+columnDisplayNames <- c('Institution<br><em>Einrichtung</em>', "Title<br><em>Veranstaltungstitel</em>", "Semester", 'Content keywords<br><em>Inhalt</em>', 'Data Lifecycle<br>Management tags')
 ```
 
 ```{r, echo=FALSE}
@@ -75,14 +77,18 @@ library(DT)
 
 options(DT.options = list(
   pageLength = 10, 
-  language = list(search = 'Search by Last update, Contributors, Title or keyword:'), 
+  language = list(search = 'Search:'), 
   initComplete = DT::JS(
     "function(settings, json) {",
-    "$(this.api().table().header()).css({'background-color': '#03989e'});",
+    "$(this.api().table().header()).css({'background-color': '#3A86FF'});",
     "}"
   )))
 
-DT::datatable(ianus_toDisplay)
+DT::datatable(ianus_toDisplay, 
+              rownames = FALSE, 
+              escape = FALSE, 
+              colnames = columnDisplayNames, 
+              options = list(list(width = '150px', targets = 1:ncol(ianus_toDisplay))))
 ```
 
 ## Data sources
