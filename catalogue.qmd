@@ -79,7 +79,7 @@ linkToJSON <- paste0("https://gitlab.rlp.net/n4o/competence_framework/-/tree/mai
 
 ianus_toDisplay$Veranstaltungstitel <- paste0("<a href=\"", linkToJSON, "\">", ianus_toDisplay$Veranstaltungstitel, "</a>")
 
-columnDisplayNames <- c('Institution<br><em>Einrichtung</em>', "Title<br><em>Veranstaltungstitel</em>", "Semester", 'Content keywords<br><em>Inhalt</em>', 'Data Lifecycle<br>Management tags')
+columnDisplayNames <- c('Institution<br><em>Einrichtung</em>', "Title<br><em>Veranstaltungstitel</em>", "Semester", 'Content keywords<br><em>Inhalt</em>', 'Data Lifecycle<br>Management')
 ```
 
 ```{r, echo=FALSE}
