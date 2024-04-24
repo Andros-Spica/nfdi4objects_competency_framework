@@ -2,11 +2,28 @@
 
 ## Background
 
-This is a book created from markdown and executable code.
+The [NFDI4Objects](https://www.nfdi4objects.net/) initiative is part of the National Research Data Infrastructure (NFDI), aiming to establish a consortium specifically dedicated to preserving the material heritage spanning approximately three million years of human and environmental history. Presently, research data resources are dispersed, temporary, and project-specific. Within the NFDI framework, the objective is to systematically centralize and make this research data accessible to the entire German scientific community while fostering national and international collaboration. Collaboration between users and providers is pivotal in designing effective National Research Data Infrastructures, often achieved through consortia.
+
+The NFDI4Objects consortium caters to the diverse needs of researchers and practitioners engaged in studying the material heritage of human and environmental history spanning millions of years. This interdisciplinary community includes professionals such as archaeologists, anthropologists, architectural historians, and various specialists in fields like archaeobotany, archaeozoology, and palaeopathology. Additionally, it involves institutions like museums, archives, and heritage agencies. NFDI4Objects encompasses the broad spectrum of material remnants from human activities, including artifacts, architectural structures, landscapes shaped by human influence, and biological/ecological remains.
 
 ## Objective
 
+The present document is an outcome of NFDI4Objects Task Area 6 "Commons and Qualification", which aims to define a **Research Data Management Competency Framework** that address the particularities of dealing with data regarding the study of the past through its material remains. The profiles contained in this framework are derived from the other activities and experts in the consortium and formulated both as reference and recommendation.
 
+In addition, we have enveloped the main description of the framework with a brief "state-of-affairs" analysis, taking the data previously collected and curated by [IANUS](https://ianus-fdz.de/) on course offerings by German Universities, and a final general recommendation for all agents involved in promoting Research Data Management in our academic domain.
 
 ## Target audiences
 
+### Disciplines
+
+In accordance to [NFDI4Objects community definition](https://www.nfdi4objects.net/index.php/ueber-uns/die-community), we aim at reaching out to scientists in the field of digitisation methods and technologies involved in archaeology, anthropology, building research, geoarchaeology, archaeobotany, archaeozoology, archaegenetics, archaeophysics, palaeopathology, archaeometry, conservation and restoration research, ethnoarchaeology, as well as institutions of cultural preservation and provenance research.
+
+### Roles
+
+This document is designed to inform and inspire tasks related to qualification undergone by professionals in three roles:
+
+- **Practitioners**: Individuals responsible for actively managing research data throughout its lifecycle, including data collection, organization, analysis, preservation, and sharing. They are ultimately the ones responsible for implementing best practices and standards to ensure data integrity, accessibility, and usability.
+
+- **Instructors**: Professionals who educate researchers and other stakeholders, as effective or potential practitioners, on the principles and practices of research data management. They develop and deliver training programs, workshops, and materials to enhance data literacy, compliance with policies, and adoption of effective data management strategies.
+
+- **Managers**: Leaders who oversee and coordinate research data management activities within an organization or project. They develop policies, allocate resources, and provide guidance to ensure that data management practices align with institutional goals, funding requirements, and ethical standards. Managers also are responsible for defining the requirements of positions related to research data management and enforcing them. Lastly, they facilitate the collaboration and communication among stakeholders involved in data-related activities.
