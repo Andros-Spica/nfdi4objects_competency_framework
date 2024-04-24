@@ -5,30 +5,30 @@
   border-radius: 5px;
 }
 
-#badgeDefault .badge {
+#badgeDefault {
   background-color: lightgrey;
 }
 
-#badgeRDM .badge {
+#badgeRDM {
   background-color: magenta;
 }
 
-#badgeDatacreation .badge {
+#badgeDatacreation {
   background-color: #58EFEC;
 }
 
-#badgeDataprocessingandstorage .badge {
+#badgeDataprocessingandstorage {
   background-color: #7CCAD5;
 }
 
-#badgeDatausage .badge {
+#badgeDatausage {
   background-color: #A0A6BE;
 }
 
-#badgeDataarchiving .badge {
+#badgeDataarchiving {
   background-color: #C481A7;
 }
 
-#badgeDatadestruction .badge {
+#badgeDatadestruction {
   background-color: #E85C90;
 }

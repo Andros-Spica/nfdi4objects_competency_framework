@@ -1,3 +1,9 @@
+---
+format:
+  html:
+    css: styles.css
+---
+
 # Existing courses and trainee programmes
 
 ```{r, echo=FALSE}
