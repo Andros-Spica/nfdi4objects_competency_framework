@@ -6,6 +6,10 @@
   border-radius: 5px;
 }
 
+#badgeRDM {
+  background-color: magenta;
+}
+
 #badgeDatacreation {
   background-color: #58EFEC;
 }

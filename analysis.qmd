@@ -30,17 +30,17 @@ keywords_unlisted <- keywords_unlisted[keywords_unlisted != "NA"]
 keyword_freq_sorted <- sort(table(keywords_unlisted), decreasing = TRUE)
 ```
 
+Content keywords included in the IANUS database that we consider directly relevant to RDM competency:
+
 ```{r, echo=FALSE}
 RDM_keywords <- c("Digitale Datenauswertung", "Digitale Dokumentation", "Datenbanken", 
                   "Datenmanagement", "Metadaten", "Archivierung", "Datenkuratierung",
                   "Online-Ressourcen", "Internet", "Webtechnologien", "Web-Kartierung", "Ausgrabungsdokumentation")
 
 is_RDM <- names(keyword_freq_sorted) %in% RDM_keywords
+
+cat(paste('-', RDM_keywords), sep = '\n')
 ```
-
-IANUS content keywords considered as related to RDM competency:
-
-`RDM_keywords`
 
 ```{r, echo=FALSE, fig.cap='Content keywords frequency'}
 cutThreshold = length(keyword_freq_sorted) # no cutting
