@@ -1,0 +1,75 @@
+# Existing Frameworks
+
+## NIH Proficiency Scale
+
+@NIH_competencies_2017
+
+> The NIH Proficiency Scale is an instrument used to measure one’s ability to demonstrate a competency on the job. The scale captures a wide range of ability levels and organizes them into five steps; from “Fundamental Awareness” to “Expert”.
+
+|                   Term                  | Translation EN/DE | Definition | Comments |
+|:---------------------------------------:|:-----------------:|:----------:|:--------:|
+| Fundamental Awareness (basic knowledge) |                   | common knowledge or an understanding of basic techniques and concepts. | Focus on learning |
+| Novice (limited experience)             |                   | level of experience gained in a classroom and/or experimental scenarios or as a trainee on-the-job. | Expected to need help when performing this skill; Focus on developing through on-the-job experience; understand and can discuss terminology, concepts, principles and issues related to this competency; utilize the full range of reference and resource materials in this competency. |
+| Intermediate (practical application)    |                   | ability to successfully complete tasks in this competency as requested    | Help from an expert may be required from time to time, but you can usually perform the skill independently; Focus is on applying and enhancing knowledge or skill; You have applied this competency to situations occasionally while needing minimal guidance to perform successfully; You understand and can discuss the application and implications of changes to processes, policies, and procedures in this area.
+ |
+| Advanced (applied theory) |  | perform the actions associated with this skill without assistance | You are certainly recognized within your immediate organization as "a person to ask" when difficult questions arise regarding this skill; Focus is on broad organizational/professional issues; You have consistently provided practical/relevant ideas and perspectives on process or practice improvements which may easily be implemented; You are capable of coaching others in the application of this competency by translating complex nuances relating to this competency into easy to understand terms; You participate in senior level discussions regarding this competency; You assist in the development of reference and resource materials in this competency.
+ |
+| Expert (recognized authority) |  | known as an expert in this area | You can provide guidance, troubleshoot and answer questions related to this area of expertise and the field where the skill is used; Focus is strategic; You have demonstrated consistent excellence in applying this competency across multiple projects and/or organizations; You are considered the “go to” person in this area within NIH and/or outside organizations; You create new applications for and/or lead the development of reference and resource materials for this competency; You are able to diagram or explain the relevant process elements and issues in relation to organizational issues and trends in sufficient detail during discussions and presentations, to foster a greater understanding among internal and external colleagues and constituents.
+ |
+
+ The competencies are divided into four sections:
+ 
+- **Non-Technical**: These are foundational competencies such as “Communication” and “Leveraging Technology” which can be applied across administrative positions.  
+- **Technical**: These competencies represent the skill sets required for specific functional areas.  
+- **Leadership & Management**: Represent the essential competencies necessary to be a successful leader or manager.  
+- **Executive Proficiencies**: These proficiencies are designed to identify the skill sets of the top levels of management and can be used as a guide for individuals aspiring to reach these positions (e.g., IC Director, Deputy IC Director, Scientific Director, Extramural Director, or Executive Officer).  
+
+Some sections have subgroups for special fields of application and a list of competencies, e.g. Accountability, Adaptability, Advisory Assistance, Attention to Detail. Change Management, Collaboration, Communications, Continuous Improvement, which are described in detail and precisely in individual sections.
+
+::: {.callout-note icon="false"}
+### Example: Competence *Data Gathering and Analysis* {.unnumbered}
+
+Seeks or collects and synthesizes information from a variety of stakeholders and sources in an objective, unbiased manner to reach a conclusion, goal, or judgment, and to enable strategic and leadership decision making.
+
+#### Key Behaviors {.unnumbered}
+
+-   Uses knowledge of data, systems, and their intersections to provide workforce information from the most applicable data source/s in response to standard or ad hoc requests and in support of data quality checks.
+-   Performs historical trending and projection analyses as appropriate for strategic needs.
+-   Meets with customers to understand their needs or concerns in order to ensure data, analytics, and reporting are used appropriately.
+-   Leverages external networks to ensure all relevant information is integrated into analysis and interpretation of data.
+-   Conducts ad hoc and standard analyses in response to customer needs, incorporating knowledge of parallel, ongoing projects into analysis for customers.
+-   Analyzes data in order to draw conclusions and identify cause and effect relationships to support leadership decisions, recommend a course of action, or solve organizational issues.
+-   Uses knowledge and understanding of the organizational context to recognize data inaccuracies and to ensure consistency and the highest quality of data and analyses.
+-   Organizes and develops data to respond to audits and data calls for NIH.
+-   Identifies issues, problems, or opportunities and determines if action is needed.
+-   Gathers, compiles, and interprets pertinent data using various data collection techniques.
+-   Clearly documents sources and validates the accuracy of data/information to resolve inconsistencies.
+-   Analyzes and investigates up-to-date information from various sources and in various formats.
+-   Seeks additional resources when gaps and inconsistencies or variances in data are found.
+-   Identifies trends in data.
+-   Understands and analyzes information.
+:::
+
+-----
+
+## WHO Data Management Competency Framework
+
+@who-dmcf  
+
+-----
+
+## Future Skills
+
+@schuller_future_2019
+
+-----
+
+## NIH Competencies Proficiency Scale
+
+@NIH_competencies_2017
+
+-----
+
+## Lernzielmatrix Zum Themenbereich Forschungsdatenmanagement (FDM)
+
+@petersen_lernzielmatrix_2023

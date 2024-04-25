@@ -4,11 +4,9 @@
 
 ## About
 
-(OVERVIEW PRESENTATION)
+The present document is an outcome of [NFDI4Objects](https://www.nfdi4objects.net/) Task Area 6 "Commons and Qualification", which aims to define a **Research Data Management Competency Framework** that address the particularities of dealing with data regarding the study of the past through its material remains. The profiles contained in this framework are derived from the other activities and experts in the consortium and formulated both as reference and recommendation.
 
-(REFER TO FULL WEBSITE)
-
-See booklet: [HTML](https://competence-framework-n4o-7c7c64d0bbb35694ddaddfe5275cdcd10ea892.pages.gitlab.rlp.net/)
+See booklet at https://n4o.pages.gitlab.rlp.net/competence_framework
 
 ## References
 
@@ -31,6 +29,8 @@ See booklet: [HTML](https://competence-framework-n4o-7c7c64d0bbb35694ddaddfe5275
 - Schüller K, Busch · P, Hindinger C (2019) Future Skills: Ein Framework für Data Literacy. Zenodo
 
 ### Website and booklet development
+
+- Ooms J (2014) The jsonlite Package: A Practical and Consistent Mapping Between JSON Data and R Objects. DOI: 10.48550/arXiv.1403.2805. http://arxiv.org/abs/1403.2805
 
 - Allaire, J., Teague, C., Scheidegger, C., Xie, Y., & Dervieux, C. (2022). Quarto (Version 1.2) [Computer software]. https://doi.org/10.5281/zenodo.5960048
 
@@ -64,11 +64,13 @@ This repository and the report it contains were developed as an activity of the 
 
 ## Contributors
 
-Contributors (in alphabetical order by first name). Collectively the "NFDI4Objects-TA6 team".
+Contributors (in alphabetical order by last name). Collectively the "NFDI4Objects-TA6 team".
 
-- Angourakis, Andreas (Ruhr-University Bochum and University of Cologne)
-- Klingenberg, Tim (Ruhr-University Bochum)
-- Linde, Lennart (Hochschule Mainz)
+- Angourakis, Andreas (Institute of Archaeological Studies, Ruhr-University Bochum and Institute of Archaeology, University of Cologne)
+- Backhaus, Henrike (Hochschule Mainz, Mainz University of Applied Sciences)
+- Bruhn, Kai-Christian (Hochschule Mainz, Mainz University of Applied Sciences)
+- Klingenberg, Tim (Institute of Archaeological Studies, Ruhr-University Bochum)
+- Linde, Lennart (Hochschule Mainz, Mainz University of Applied Sciences)
 
 ## Contact
 
