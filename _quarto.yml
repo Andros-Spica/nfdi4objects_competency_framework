@@ -36,12 +36,16 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - part: "Current state"
+    - part: "A Current state"
       chapters:
       - current-state-overview.qmd
       - catalogue.qmd
       - analysis.qmd
-    - part: "NFDI4Objects Competency framework"
+    - part: "B Derivation of the competence framework"
+      chapters: 
+        - existing-frameworks.qmd
+        - comparative-synthesis.qmd
+    - part: "C NFDI4Objects Competency Framework"
       chapters:
         - framework.qmd
         - area-1.qmd
