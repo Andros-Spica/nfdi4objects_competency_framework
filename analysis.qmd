@@ -23,7 +23,7 @@ keywords_unique <- unique(unlist(ianus$Keywords))
 source(file = "source/IANUS_buildDLM.R")
 ianus$DLM <- IANUS_buildDLM(ianus$Keywords)
 ```
-
+  
 ```{r, echo=FALSE}
 keywords_unlisted <- unlist(ianus$Keywords)
 keywords_unlisted <- keywords_unlisted[keywords_unlisted != "NA"]

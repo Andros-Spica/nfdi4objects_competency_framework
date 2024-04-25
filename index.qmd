@@ -11,4 +11,4 @@
 # Abbreviations {.unnumbered}
 
 - **GIS**   Geographical Information Systems
-- **RDA**   Research Data Management
+- **RDM**   Research Data Management

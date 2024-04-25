@@ -1,6 +1,6 @@
 # NFDI4Objects Kompetenzrahmen Forschungsdatenmanagement
 
-*Research Data Management Competency Framework for the Research Data Infrastructure for the Material Remains of Human History (NFDI4OBJECTS) consortium*
+*Research Data Management Competency Framework for the Research Data Infrastructure for the Material Remains of Human History (NFDI4Objects) consortium*
 
 ## About
 
@@ -48,9 +48,9 @@ Unless otherwise specified on particular materials, all material in this reposit
 Please cite this work as follows:
 
 ```{bibtex}
-@article{QualificationProfilesNFDI4OBJECTS,
-  title={Qualification Profiles for Research Data Management on the Material Remains of Human History (NFDI4OBJECTS)},
-  author={NFDI4OBJECTS-TA6 team},
+@article{QualificationProfilesNFDI4Objects,
+  title={Qualification Profiles for Research Data Management on the Material Remains of Human History (NFDI4Objects)},
+  author={NFDI4Objects-TA 6 team},
   journal={GitLab},
   year={2024},
   doi={},
@@ -60,11 +60,11 @@ Please cite this work as follows:
 
 ## Acknowledgements
 
-This repository and the report it contains were developed as an activity of the Task Are 6, "NFDI4OBJECTS for Commons and Qualification", within the [Research Data Infrastructure for the Material Remains of Human History (NFDI4OBJECTS) consortium](https://www.nfdi4objects.net/).
+This repository and the report it contains were developed as an activity of the Task Are 6, "NFDI4Objects for Commons and Qualification", within the [Research Data Infrastructure for the Material Remains of Human History (NFDI4Objects) consortium](https://www.nfdi4objects.net/).
 
 ## Contributors
 
-Contributors (in alphabetical order by first name). Collectively the "NFDI4OBJECTS-TA6 team".
+Contributors (in alphabetical order by first name). Collectively the "NFDI4Objects-TA6 team".
 
 - Angourakis, Andreas (Ruhr-University Bochum and University of Cologne)
 - Klingenberg, Tim (Ruhr-University Bochum)

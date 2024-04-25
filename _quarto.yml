@@ -7,8 +7,28 @@ execute:
   warning: false
 
 book:
-  title: "NFDI4OBJECTS Research Data Management Competency Framework"
-  author: "NFDI4OBJECTS-TA6 team"
+  title: "NFDI4Objects Research Data Management Competency Framework"
+  author: # vgl. https://quarto.org/docs/journals/authors.html
+  - name: Jane Roe
+    orcid: 0000-0000-0000-0000
+    email: email@example.org
+    affiliation: 
+      - name: Incredible Campus
+        city: Outer State
+        url: https://example.org
+    attributes:
+      corresponding: true
+      equal-contributor: true
+  - name: John Doe
+    orcid: 0000-0000-0000-0000
+    email: email@example.org
+    affiliation: 
+      - name: Party University
+        city: Moon
+        url: https://example.org
+    attributes:
+      corresponding: false
+      equal-contributor: true
   date: today
   date-format: DD MMMM, YYYY
   page-navigation: true
@@ -21,7 +41,7 @@ book:
       - current-state-overview.qmd
       - catalogue.qmd
       - analysis.qmd
-    - part: "NFDI4OBJECTS Competency framework"
+    - part: "NFDI4Objects Competency framework"
       chapters:
         - framework.qmd
         - area-1.qmd
