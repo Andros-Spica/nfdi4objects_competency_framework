@@ -67,7 +67,7 @@ In appendix C, the authors provide a differentiated Data Literacy Framework, whi
 
 -   A: Establishing a data culture - from system to measurable object
 -   B: Providing data - from measurable objects to data
--   C: Analyze data - From data to data products
+-   C: Analyzing data - From data to data products
 -   D: Interpreting data products - From data products to data
 -   E: Interpret data - From data to measurable objects
 -   F: Derive action - From measurable objects to the system
@@ -77,7 +77,7 @@ These "fields" each contain several Competencies that are defined in the framewo
 Furthermore, each Competency is provided with examples for levels of competency ("*Kompetenzniveaus*"), although these are - in contrast to other frameworks - not specifically defined or named (such as "Novice" or "Expert").
 
 ::: {.callout-note icon="false"}
-### Example: Field of Competency C: Daten auswerten - Von Daten zu Datenprodukten
+### Example: Field of Competency C: Analyzing data - From data to data products
 
 +-----------------------+---------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Competency            |                                                                                                                     | Competency Dimension                                                                      |                                                                                                                         |                                                                                                 | Level of Competency                                                                                                                                                             |
