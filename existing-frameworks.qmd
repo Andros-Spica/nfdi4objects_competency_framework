@@ -19,7 +19,7 @@
 
  The competencies are divided into four sections:
  
-- **Non-Technical**: These are foundational competencies such as “Communication” and “Leveraging Technology” which can be applied across administrative positions.  
+- **Non-Technical**: These are fundamental competencies such as “Communication” and “Leveraging Technology” which can be applied across administrative positions.  
 - **Technical**: These competencies represent the skill sets required for specific functional areas.  
 - **Leadership & Management**: Represent the essential competencies necessary to be a successful leader or manager.  
 - **Executive Proficiencies**: These proficiencies are designed to identify the skill sets of the top levels of management and can be used as a guide for individuals aspiring to reach these positions (e.g., IC Director, Deputy IC Director, Scientific Director, Extramural Director, or Executive Officer).  
