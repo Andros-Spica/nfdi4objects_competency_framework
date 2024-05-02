@@ -4,6 +4,10 @@
 directory = "data/lehrangebote"
 ```
 
+```{r}
+library(wordcloud)
+```
+
 ```{r, echo=FALSE}
 # Load IANUS data from JSON files
 source(file = "source/IANUS_loadJSONs.R")
@@ -68,7 +72,7 @@ text(seq(1.5, end_point, by = 2), par("usr")[3]-0.25,
 ```
 
 ```{r, echo=FALSE, fig.height=6, fig.width=6, fig.cap='Wordcloud: all content keywords'}
-library(wordcloud) 
+set.seed(123)
 
 par(mar = rep(0, 4))
 wordcloud(words = names(keyword_freq_sorted), freq = keyword_freq_sorted, min.freq = 1,
@@ -77,8 +81,29 @@ wordcloud(words = names(keyword_freq_sorted), freq = keyword_freq_sorted, min.fr
           colors=brewer.pal(8, "Set1"))
 ```
 
+```{r, echo=FALSE, fig.cap='Content keywords frequency'}
+cutThreshold = length(keyword_freq_sorted[is_RDM]) # no cutting
+RDMkeywords_top <- (keyword_freq_sorted[is_RDM])[1:cutThreshold]
+
+colorSet <- c("lightblue","darkred")
+
+par(mar = c(7, 4, 2, 2) + 0.2, cex.axis = 0.7)
+
+barplot(RDMkeywords_top, 
+        las = 2,
+        main ="Most frequent keywords (Inhalte)\nrelated to RDM",
+        ylab = "Frequency",
+        xaxt="n", space = 1)
+
+end_point = 0.5 + nrow(RDMkeywords_top) + nrow(RDMkeywords_top) - 1
+
+text(seq(1.5, end_point, by = 2), par("usr")[3]-0.25, 
+     srt = 60, adj = 1, xpd = TRUE,
+     labels = paste(names(RDMkeywords_top)), cex = 0.65)
+```
+
 ```{r, echo=FALSE, fig.height=6, fig.width=6, fig.cap='Wordcloud: RDM content keywords'}
-library(wordcloud) 
+set.seed(7)
 
 par(mar = rep(0, 4))
 wordcloud(words = names(keyword_freq_sorted)[is_RDM], freq = keyword_freq_sorted[is_RDM], min.freq = 1,

@@ -1,3 +1,5 @@
+source("source/IANUS_umlautToASCII.R")
+
 IANUS_toJSON <- function(dataframe, directory, order.by = "Stadt")
 {
   dir.create(file.path(".", directory), showWarnings = FALSE)
@@ -6,6 +8,7 @@ IANUS_toJSON <- function(dataframe, directory, order.by = "Stadt")
   {
     id <- dataframe[i, "id"]
     einrichtung <- dataframe[i, order.by]
+    einrichtung <- IANUS_umlautToASCII(einrichtung)
     
     if (length(einrichtung) == 0) {
       einrichtung <- "0_"
