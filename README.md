@@ -26,7 +26,7 @@ See booklet at https://n4o.pages.gitlab.rlp.net/competence_framework
 
 - (2017) Competencies Proficiency Scale. In: National Institutes of Health, Office of Human Resources. https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale. Accessed 20 Feb 2024
 
-- Schüller K, Busch · P, Hindinger C (2019) Future Skills: Ein Framework für Data Literacy. Zenodo
+- Schüller K, Busch · P, Hindinger C (2019) Future Skills: Ein Framework für Data Literacy. https://doi.org/10.5281/zenodo.3349865 (Zenodo)
 
 ### Website and booklet development
 
