@@ -20,7 +20,7 @@ See booklet at https://n4o.pages.gitlab.rlp.net/competence_framework
 
 - Petersen B, Engelhardt C, Hörner T, et al (2023) Lernzielmatrix zum Themenbereich Forschungsdatenmanagement (FDM) für die Zielgruppen Studierende, PhDs und Data Stewards. Zenodo. https://zenodo.org/records/8010617
 
-- Data, Strategy and Innovation (DSI), Health Information and Intelligence (HII), WHO Western Pacific Data management competency framework. World Health Organization
+- WHO Western Pacific (2023) Data management competency framework. World Health Organization Regional Office for the Western Pacific, Manila. https://www.who.int/publications-detail-redirect/9789290620099. Accessed 15 May 2024
 
 - RSE Competencies Toolkit. https://rsetoolkit.github.io/rse-competencies-toolkit/. Accessed 30 Jan 2024
 
