@@ -226,7 +226,7 @@ These "fields" each contain several Competencies that are defined in the framewo
 Furthermore, each Competency is provided with examples for levels of competency ("*Kompetenzniveaus*"), although these are - in contrast to other frameworks - not specifically defined or named (such as "Novice" or "Expert").
 
 ::: {.callout-note icon="false"}
-### Example: Field of Competency C: Analyzing data - From data to data products
+### Example: Field of Competency C: Analyzing data - From data to data products {.unnumbered}
 
 +-----------------------+---------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Competency            |                                                                                                                     | Competency Dimension                                                                      |                                                                                                                         |                                                                                                 | Level of Competency                                                                                                                                                             |
@@ -244,7 +244,7 @@ Furthermore, each Competency is provided with examples for levels of competency 
 The different levels of competency ("Kompetenzniveaus") are - as opposed to other frameworks - not strictly defined or named, but merely numbered. In Appendix B, following **suggestions** for five different levels of competency are defined:
 
 ::: {.callout-note icon="false"}
-### Suggestions for Competency Levels
+### Suggestions for Competency Levels {.unnumbered}
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Competency level ("*Kompetenzniveau*")**                                                                                                                                                                                                                                                                                                                                                                                                            | **Examples**                                                                                                                                                              |
@@ -273,6 +273,102 @@ The different levels of competency ("Kompetenzniveaus") are - as opposed to othe
 
 -----
 
-## Lernzielmatrix Zum Themenbereich Forschungsdatenmanagement (FDM)
+## Learning objective matrix on the topic of research data management (RDM) for the target groups students, PhDs and data stewards
+
+*Lernzielmatrix Zum Themenbereich Forschungsdatenmanagement (FDM) für die Zielgruppen Studierende, PhDs und Data Stewards*
 
 @petersen_lernzielmatrix_2023
+
+>This learning objective matrix summarizes relevant teaching contents and associated learning objectives for the qualification levels Bachelor, Master, PhD and Data Steward from a number of national and international projects and training concepts in the field of RDM in a consistent form and offers subsequent users an orientation for identifying relevant content aspects as well as a working basis, e.g. for an extended subject-specific or event-specific design.  
+>(from Zenodo description)
+
+### Main sources
+
+- @engelhardt_how_2022: Particularly, "Appendix E - Knowledge units and corresponding learning outcomes for the bachelor's, master's and PhD degree levels".  
+- @bloom_taxonomy_1964 and @anderson_taxonomy_2001: learning objectives taxonomy.
+- @cursio_leitfaden_2013: competence definition.  
+- @arbeitskreis_deutscher_qualifikationsrahmen_ak_dqr_deutscher_2011: assignation of learning objectives to competence areas (subject, methodological, personal and social competence).  
+
+### Competence areas
+
+- *Professional competence [PC]*: Ability and willingness to deal with and assess tasks and problems in a technically appropriate manner.  
+- *Methodological competence [MC]*: Ability and willingness to apply certain learning and working methods that are necessary for the development and application of other competences, especially subject competence.  
+- *Self-competence [SelfC]*: Ability and willingness to develop oneself throughout life and to shape one's own life independently and responsibly in the respective social, cultural or professional context.  
+- *Social competence [SC]*: Ability and willingness to cooperate with others in a goal-oriented manner, to grasp their interests and social situations, to deal with them rationally and responsibly and to communicate with them, as well as to help shape the world of work and life. 
+
+### Topics
+
+#### Basics and overarching concepts
+
+- General principles and concepts of research data management: Definitions of research data management (RDM) and research data; research data life cycle and its stages; relevance of RDM; history of RDM; current developments in RDM; important players; relevant terms.  
+- Research data policies: policy/guideline; functions of a policy; forms of policies (subject-specific, institutional,...); typical contents of a policy; development of research data policies (in German-speaking countries); recommendations for the development of policies.  
+- Data management plans: data management plan (DMP); functions of a DMP; components of a DMP; advantages and disadvantages of a DMP; quality criteria of a DMP; requirements of third-party funding bodies and others; supporting tools; institutional support structures.  
+- FAIR principles: Principles that reusable research data must meet; ensuring sustainable RDM; relating FAIR principles to data management, and infrastructures and services.  
+- Open X (Open Data, Open Source, Open Science, etc.): Term Open Science; Open Science contents: Open Access, Open Data, Open Source ...; advantages and disadvantages; ethical aspects; FAIR vs. Open; Open Data platforms; degree of openness (5 star model).   
+
+#### Working with Data
+
+- Order and structure, versioning: Concepts for logical folder structures; file naming conventions; renaming tools; advantages of working in a structured way; importance of a structured approach for collaborations; definition of versioning: versioning methods/concepts; versioning tools.  
+- Data, data types, data formats: Data types, data formats, file formats; choosing suitable data formats; important tools for format recognition and validation; data standards.  
+- Data storage and backup: different storage systems (advantages and disadvantages); backup strategies; backup services; 3-2-1 rule.  
+- Data safety: Access control/access management/access rights; policies; data security measures.  
+- Data quality: Significance of data for information and knowledge; concept of quality; models/criteria for assessing data quality; quality of tabular data.  
+- Tools: Research data management RDM tools.  
+- (Research-)Software und Coding: Evaluating data; using suitable software; basic knowledge of programming.   
+
+#### Documentation and metadata
+
+- Data documentation: Advantages of data documentation; typical content and structure of data documentation; different forms of data documentation.  
+- Metadata and metadata standards: Definition of metadata; types of metadata; metadata standards; function of metadata; possibilities of storing metadata; metadata formats; interoperability of metadata.  
+- Persistent identifiers: Definition of persistent identifiers (PID); advantages and disadvantages of PIDs; functions of PIDs; detailed description of selected PIDs; structure of PIDs.   
+- Ontologies and controlled vocabularies: Ontologies; vocabularies; terminologies; directories.  
+
+#### Long-term preservation, publication, reuse
+
+- Long-term preservation of data: Requirements for long-term preservation (LTP); criteria for LTP; institutional and non-institutional possibilities of LTP; technical aspects of LTP.  
+- Publication channels for data: Advantages and disadvantages of different publication channels; publishing data; different types of repositories.  
+- Repositories: Definition of repositories; different forms of repositories; advantages and disadvantages of different repositories; functions of repositories.    
+- Reuse data: Advantages and disadvantages of data reuse; data citation methods; relevant licences; data sources; search tools; search strategies.   
+
+#### Law and ethics
+- General legal aspects: RDM relevant legal aspects; basics of copyright law; licensing law and licensing systems.    
+- Data protection and personal data  
+- Informed Consent  
+- Anonymisation and pseudonymisation: Definitions; difference anonymisation/pseudonymisation; procedure of anonymisation/pseudonymisation; degree of anonymisation; measures as prerequisite for archiving and publication.    
+- Ethical Aspects and Good Scientific Practice (GSP): Ethical principles for handling data; information on ethical aspects; good scientific practice; dealing with scientific misconduct; CARE principles.    
+
+#### Supporting structures
+
+- Roles in data management / data stewardship: Fields of activity in RDM; typical problems in a professional context.  
+- Relevant infrastructures: Typical institutional and non-institutional RDM-relevant services.  
+- Didactics: Basics of course planning; psychology of learning; motivation and activation of learners; forms of presentation; use of didactic methods; giving and taking feedback.  
+- Consulting: Basics of counselling; methods and approaches in counselling work.  
+
+### Learning levels
+
+1. *Remembering/Knowledge*: Accessing relevant knowledge in long-term memory;  
+2. *Understanding*: Assigning meaning to information in the learning unit, whether oral, written or graphic;  
+3. *Apply*: Perform or use a course of action (a scheme, a method) in a given situation;  
+4. *Analyse*: Break down learning content into its constructed elements and determine how they are interconnected to form an overarching structure or purpose;  
+5. *Judge*: Make judgements based on criteria or standards;  
+6. *Create*: Putting elements together into a coherent or functioning whole; assembling elements into a new pattern or structure.  
+
+### Matrix structure
+
+- **Columns**: the qualification levels from Bachelor's to Master's and PhD to Data Stewards;  
+- **Rows**: the individual learning objectives;
+- **Groups of rows**: the topic clusters and topics.
+
+>In order to avoid redundancies, the learning objectives of the lower qualification levels are not listed again in the higher ones. Thus, for the qualification level "PhD", not only the learning objectives listed in the column "PhD" are relevant, but also those listed in the columns "Master" and "Bachelor".  
+>(from *How to use*)
+
+::: {.callout-note icon="false"}
+### Example: FAIR principles - *FAIR-Prinzipien* {.unnumbered}
+
+| learning level | Learning objectives (*Learners are able to...*) |
+|:-------|:----------------------------|
+| Bachelor | ... name the FAIR principles. [PC 1] |
+| Master | ... discuss advantages and disadvantages of FAIR data. [PC 2, MK 3, SC 3] |
+| PhD | ... critically assess the FAIRness of data. [PC 3] |
+| Data Stewards | ... describe the FAIR principles and communicate them to others. [PC 2, MC 3, SC 3] |
+:::
