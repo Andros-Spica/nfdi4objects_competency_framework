@@ -1,6 +1,6 @@
 # Existing Frameworks
 
-## NIH Proficiency Scale
+## NIH Competencies Proficiency Scale
 
 @NIH_competencies_2017
 
@@ -54,7 +54,90 @@ Seeks or collects and synthesizes information from a variety of stakeholders and
 
 ## WHO Data Management Competency Framework
 
-@who-dmcf  
+@who-dmcf
+
+>The Framework is designed around the **four core stages of the data management cycle**: **data generation**, **processing**, **analysis** and **usage**. Within the Framework, these stages are classified as **competency areas**, and within these four competency areas, a further **17 competency domains** have been identified. These domains are effectively sets of sub-competencies within the wider competency areas. The Framework provides users with **detailed domain definitions** and **specific descriptors of the technical knowledge and skill sets** covered within each domain. The Framework further provides and describes **four proficiency levels**, i.e. levels of competence within each domain, and describes the technical knowledge and skills that determine the achievement of each proficiency level. This is rounded out by **attitudinal domains** that describes behaviours and mindsets that are essential for long-term sustainable capacity-building."  
+>(p. vii-viii, emphasis added)
+
+![Structure of WHO Data Management Competency Framework (Fig. 2)](figs/WHO-framework.png)
+
+### Competency (Proficency) levels
+
+| Level | Classification | Proficiency level descriptors |
+|:---:|:-------:|:--------------------------------------:|
+| 1 | Learner-Beginner | A graduate-level employee who has just entered the health information workforce and appointed to their first role. Has a level of theoretical knowledge and some practical experience, but this has been acquired in a “controlled-learning” college setting. Because of this, practically oriented work and task-completion experience is very limited, and the employee requires supervised, delegated, on-the-job incremental tasks with regular coaching and feedback. |
+| 2 | Novice Practitioner | Has been in the role for one year or more and is developing competency across relevant role domains but continues to work under supervision and oversight on all but most basic delegated professional tasks. |
+| 3 | Independent Practitioner | Is independently and reliably competent in the specific domain. Rarely is there a need to refer for advice or guidance – only in unique or exceptional situations. |
+| 4 | Master Practitioner | Has achieved mastery in the domain. Is an acknowledged expert and expands the boundaries of domain knowledge through research, experimentation and innovation. Is recognized as a trainer and mentor to juniors and is sought after by peers and others for technical advice and guidance. |
+
+### Definition of knowledge and skill dimensions
+
+Within each competency domain, grouped per competency area, a bullet-point definition of the expected knowledge and skills at each proficiency level. Requirements are noted to be cumulative; i.e. a proficiency level requires all knowledge and skills required at lower levels.
+
+::: {.callout-note icon="false"}
+### Example: Competency Area 1 *Data Generation* - Domain 1 *Data management planning* - Level 2 Novice Practicioner {.unnumbered}
+
+#### Description {.unnumbered}
+
+>**Data management planning** is the process of delivering a formal written document (*data management plan*) that describes the process and methodology by which data will be created, collected and maintained throughout the life cycle of a proposed survey, trial or research activity and beyond (4–6). Factors of relevance and concern include data source identification and validation, data quality assurance and control, selection of data types (primary, secondary, tertiary), appropriate collection methodology and data maintenance (see Domain 4 below).  
+>(p. 7, emphasis added)
+
+#### Novice Practicioner {.unnumbered}
+
+**Knowledge dimension**:
+
+In addition to the Learner-Beginner knowledge, be able to describe and explain:
+
+- The factors that influence and determine the design of data collection instruments and data presentation tools and techniques (for example, the audience, the nature of the data, whether to store in a structured or unstructured manner)  
+- Inherent risks within the overall data collection process  
+- The expected contents, structure and core elements of a data management plan (for example, the what and the how of data collection, application of the data management cycle)  
+- The organizational process of escalating identified data security risks  
+
+*(Learner-Beginner requirements)*
+
+- What a data management plan (or adapted term for localized use) is  
+- The purpose, role and importance of a data management plan in the data-generation process  
+- Why data are organizational assets and why data security risks should be monitored and mitigated  
+- The critical limitations of data  
+- The core International Organization for Standardization (ISO) data standards and data management planning principles  
+- The most common risks associated with data  
+- How and under what circumstances identified data risks should be escalated through the risk management structure
+
+**Skills dimension**:
+
+In addition to the Learner-Beginner skills, be able to do the following:
+
+- Draft a basic data management plan based on a provided template  
+- Identify data risks in a provided data management plan and draft a basic risk removal/mitigation plan to address them  
+- Design basic data collection instruments and presentation tools and techniques  
+- Initiate an appropriate data security risk escalation process
+
+*(Learner-Beginner requirements)*
+
+- Identify any missing key information in a data request (for example, target population) and know when to seek further clarification  
+- Identify where ISO data standards and data management planning principles have been applied (or not) in a sample data management plan  
+- Categorize the levels of potential value and utilization of different data types and datasets based on the identified limitations of the data provided  
+- Recognize and categorize different data types and datasets in ascending order of value to the organization (D/C/B/A – low, medium, high, mission essential)  
+- Categorize different data types and datasets in ascending order of risk to the organization (D/C/B/A – low, medium, high, mission threatening)
+
+:::
+
+### Attitudes
+
+The WHO Competency Framework also defines a set of attitudes that should be awarded to improve **professionalism** (p. 50-51):
+
+- **Curiosity**  
+- **Commitment**  
+- **Collaboration**  
+- **Compliance**  
+
+Those are, however, related to a more general work ethic rather than particularly to data management. This inclusion does raise an important point: should an attitude dimension be considered when defining a RDM competency framework within the disciplinary domain of NFDI4Objects?
+
+### Framework application for profile definition
+
+Given the framework definitions, the profile for a position and/or graduate can be defined by stating which intersection of area-domain and level are required, accounting for both specific knowledge and skills as well as attitudes, more generally. 
+
+![Example of a data management competency profile (Annex 1, p. 58)](figs/WHO-framework-profile-example.png)
 
 -----
 
@@ -121,12 +204,6 @@ The different levels of competency ("Kompetenzniveaus") are - as opposed to othe
 |                                                                                                                                                                                                                                                                                                                                                                                                                                                       | b\) as a data protection specialist, can advise users at level (2) to determine the relevant data protection requirements and explain why which criteria must be observed |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
-
------
-
-## NIH Competencies Proficiency Scale
-
-@NIH_competencies_2017
 
 -----
 
