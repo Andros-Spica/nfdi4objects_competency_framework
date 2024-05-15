@@ -11,4 +11,6 @@
 # Abbreviations {.unnumbered}
 
 - **GIS**   Geographical Information Systems
+- **R**     Open-source scripting language and software specialised in statistical analysis ([The R Project for Statistical Computing](https://www.r-project.org/)) 
 - **RDM**   Research Data Management
+- **SQL**   Structured Query Language
