@@ -1,2 +1,9 @@
 # Comparative synthesis of existing frameworks
 
+|   | NIH | WHO | Future Skills | Learning objective matrix |
+|---|-----|-----|-----|-----|
+| Levels *Kompetenzstufen* | **5 levels**: from "Fundamental Awareness" to "Expert" | **4 levels**: from "Learner-Beginner" to "Master Practitioner" | Multiple, per competency fields, not named | **6 learning levels**: from "Remembering/Knowledge" to "Create" |
+| Types *Kompetenzarten* *Kompetenzniveau* | **4 types**: Non-Technical, Technical, Leadership & Management, Executive Proficiencies | *-* | *-* | **4 competences**: Professional, Methodological, Self, Social |
+| Dimensions | *-* | Knowledge, skill, attitude | Knowledge, skill, attitude | (implicit in learning levels) |
+| Areas/domains | *-* | **4 areas (17 domains)**: Data generation, processing, analysis, usage | **6 Fields**: Establishing a data culture, and Providing data, Analyzing data, Interpreting data products, Interpret data, Derive action | **6 Topics**: "Basics and overarching concepts", "Working with Data", "Documentation and metadata", "Long-term preservation, publication, reuse", "Law and ethics", "Supporting structures" | 
+| Qualification degree | *-* | *-* | *-* | Bachelor, Master, PhD, Data Stewards |
