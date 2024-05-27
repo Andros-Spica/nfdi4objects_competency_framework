@@ -66,10 +66,10 @@ This repository and the report it contains were developed as an activity of the 
 
 Contributors (in alphabetical order by last name). Collectively the "NFDI4Objects-TA6 team".
 
-- Angourakis, Andreas (Institute of Archaeological Studies, Ruhr-University Bochum and Institute of Archaeology, University of Cologne)
+- Angourakis, Andreas (Institut für Archäologische Wissenschaften, Ruhr-University Bochum and Institute of Archaeology, University of Cologne)
 - Backhaus, Henrike (Hochschule Mainz, Mainz University of Applied Sciences)
 - Bruhn, Kai-Christian (Hochschule Mainz, Mainz University of Applied Sciences)
-- Klingenberg, Tim (Institute of Archaeological Studies, Ruhr-University Bochum)
+- Klingenberg, Tim (Institut für Archäologische Wissenschaften, Ruhr-University Bochum)
 - Linde, Lennart (Hochschule Mainz, Mainz University of Applied Sciences)
 
 ## Contact

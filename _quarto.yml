@@ -9,25 +9,48 @@ execute:
 book:
   title: "NFDI4Objects Research Data Management Competency Framework"
   author: # vgl. https://quarto.org/docs/journals/authors.html
-  - name: Jane Roe
-    orcid: 0000-0000-0000-0000
-    email: email@example.org
+  - name: Andreas Angourakis
+    orcid: 0000-0002-9946-8142
+    email: Andreas.Angourakis@ruhr-uni-bochum.de
     affiliation: 
-      - name: Incredible Campus
-        city: Outer State
-        url: https://example.org
+      - name: Institut für Archäologische Wissenschaften, Ruhr-Universität Bochum
+        url: https://www.ruhr-uni-bochum.de/archaeologie
     attributes:
       corresponding: true
       equal-contributor: true
-  - name: John Doe
-    orcid: 0000-0000-0000-0000
-    email: email@example.org
+  - name: Henrike Backhaus
+    orcid: 0000-0002-8793-4185
+    email: henrike.backhaus@hs-mainz.de
     affiliation: 
-      - name: Party University
-        city: Moon
-        url: https://example.org
+      - name: Hochschule Mainz, Mainz University of Applied Sciences
+        url: https://www.hs-mainz.de/
     attributes:
-      corresponding: false
+      corresponding: true
+      equal-contributor: true
+  - name: Kai-Christian Bruhn
+    orcid: 0000-0001-8322-1260
+    email: kai-christian.bruhn@hs-mainz.de
+    affiliation: 
+      - name: Hochschule Mainz, Mainz University of Applied Sciences
+        url: https://www.hs-mainz.de/
+    attributes:
+      corresponding: true
+      equal-contributor: true
+  - name: Tim Klingenberg
+    email: tim.klingenberg@rub.de
+    affiliation: 
+      - name: Institut für Archäologische Wissenschaften, Ruhr-Universität Bochum
+        url: https://www.ruhr-uni-bochum.de/archaeologie
+    attributes:
+      corresponding: true
+      equal-contributor: true
+  - name: Lennart Linde
+    email: lennart.linde@hs-mainz.de
+    affiliation: 
+      - name: Hochschule Mainz, Mainz University of Applied Sciences
+        url: https://www.hs-mainz.de/
+    attributes:
+      corresponding: true
       equal-contributor: true
   date: today
   date-format: DD MMMM, YYYY
