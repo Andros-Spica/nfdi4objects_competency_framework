@@ -10,7 +10,10 @@
 
 # Abbreviations {.unnumbered}
 
-- **GIS**   Geographical Information Systems
-- **R**     Open-source scripting language and software specialised in statistical analysis ([The R Project for Statistical Computing](https://www.r-project.org/)) 
-- **RDM**   Research Data Management
-- **SQL**   Structured Query Language
+- **CARE**:  CARE data principles for Indigenous Data Governance (complement to FAIR) @noauthor_care_2023
+- **DMP**:   Data Management Plan  
+- **FAIR**:  FAIR data principles: Findable, Accessible, Interoperable, and Reusable @wilkinson_fair_2016
+- **GIS**:   Geographical Information Systems
+- **R**:     Open-source scripting language and software specialised in statistical analysis ([The R Project for Statistical Computing](https://www.r-project.org/)) [@r_project]
+- **RDM**:   Research Data Management
+- **SQL**:   Structured Query Language
