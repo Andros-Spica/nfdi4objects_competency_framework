@@ -1,10 +1,6 @@
 # Competency area 4: Data Usage
 
-## Domain 1: Data interpretation and conclusion
+## Domain 1: Data interpretation
 
-## Domain 2: Data integration
-
-## Domain 3: Data presentation and reporting
-
-## Domain 4: Transfer to action-oriented recommendations
+## Domain 2: Data presentation and reporting
 

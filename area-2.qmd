@@ -2,11 +2,7 @@
 
 ## Domain 1: Data entry
 
-## Domain 2: Data cleaning
+## Domain 2: Data Data verification and validation
 
-## Domain 3: Data validation
-
-## Domain 4: Data verification
-
-## Domain 5: Data transformation
+## Domain 3: Data transformation
 

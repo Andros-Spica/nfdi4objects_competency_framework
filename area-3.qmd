@@ -2,9 +2,7 @@
 
 ## Domain 1: Descriptive analysis
 
-## Domain 2: Diagnostic analysis
+## Domain 2: Explanatory analysis
 
 ## Domain 3: Predictive analysis
-
-## Domain 4: Prescriptive analysis
 
