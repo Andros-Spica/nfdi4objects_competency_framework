@@ -1,9 +1,10 @@
 # Framework structure and components
 
-![infographics](figs/infographics.png)
+## Overview
+
 This Research Data Management Competency Framework is derived from existing and established frameworks (see reference sources), but was developed specifically for the NFDI4Objects consortium's expert domain, namely data from the research and conservation of material heritage.
 
-## Overview
+<!--![infographics](figs/infographics.png)-->
 
 The framework is a practical tool to enable research data management practitioners, instructors and managers:
 
@@ -12,47 +13,86 @@ The framework is a practical tool to enable research data management practitione
 - to map the gaps that exist between required and actual competency profiles; and
 - to draft competency development plans at individual, team, department, division and organizational levels.
 
-The Framework is structured around four competency areas or “pillars” reflecting the four distinct stages of the data lifecycle management. Within each competency area are competency domains (**??** in total), which are a set of distinct sub-competencies for each competency area. Within each domain, the Framework sets out the three competency dimensions (subject **knowledge**, practical **skills** and personal **attitudes**), which are the determinants of overall **competence**.
+## Areas, domains and dimensions
 
-Each domain contains **five** designated proficiency **levels** (ranging from learner-beginner to master-expert practitioner), which describe the incremental levels of proficiency by reference to a set of described technical–professional tasks that are specific, measurable and role relevant and which will determine the level of proficiency achieved by an individual or required for a specific position.
+The Framework is structured around four competency areas or “pillars” reflecting the four distinct stages of the data lifecycle management. Within each competency area are competency domains (**12** in total), which are a set of distinct sub-competencies for each competency area:
 
-## Areas
+- Area 1 - **Data generation**:  
+  - Domain 1 - *Data management planning*: *Data Management Plan* (DMP), *FAIR* [@wilkinson_fair_2016], *CARE* [@noauthor_care_2023], ethical self-assessment     
+  - Domain 2 - *Data creation*: measurement and recording methods   
+  - Domain 3 - *Data collection*: data models; sourcing and harmonisation  
+  - Domain 4 - *Data maintenance*: data storage and protection  
+- Area 2 - **Data processing**:  
+  - Domain 1 - *Data entry*: manual data typing, digitalisation   
+  - Domain 2 - *Data verification and validation*: data cleaning, correction, assessment of suitability  
+  - Domain 3 - *Data transformation*: modifying format, structure, scale or values for clarity, accuracy, or usability purposes  
+- Area 3 - **Data analysis**:  
+  - Domain 1 - *Descriptive analysis*: identification of trends and statistical relationships 
+  - Domain 2 - *Explanatory analysis*: hypothesising and evidencing causal relationships  
+  - Domain 3 - *Predictive analysis*: projection of future/unknown data given current/known data    
+- Area 4 - **Data usage**:  
+  - Domain 1 - *Data interpretation*: synthesising data analysis, combining disparate sources and results, making qualitative inferences   
+  - Domain 2 - *Data presentation and reporting*: presenting qualitative, meaningful information to non-specialists, supported by data interpretation and by use of narrative and graphical tools   
 
-## Domains
+Within each domain, the Framework sets out the three competency dimensions (subject **knowledge**, practical **skills** and personal **attitudes**), which are the determinants of overall **competence**.
 
 ## Levels
 
-### Learner-Beginner
->Fundamental awareness. You have a common knowledge or an understanding of basic techniques and concepts.
+Each domain contains **five** designated proficiency **levels** (ranging from learner-beginner to master-expert practitioner), which describe the incremental levels of proficiency by reference to a set of described technical–professional tasks that are specific, measurable and role relevant and which will determine the level of proficiency achieved by an individual or required for a specific position.
+
+### Beginner
+Learning milestones:  
+- Fundamental awareness; 
+- You have a common knowledge or an understanding of basic techniques and concepts, gained in generic introductory courses or references.
+
+Learning focus:
+- on improving more specialised knowledge and skills through specialised courses and references.
 
 ### Novice
->You have the level of experience gained in a classroom and/or experimental scenarios or as a trainee on-the-job. You are expected to need help when performing this skill.
+Learning milestones:  
+- You have the level of experience gained in a specialised course or as a trainee on-the-job;
+- You are expected to need help when performing this skill;  
+- You understand and can discuss terminology, concepts, principles and issues related to this competency;
+- You utilize the full range of reference and resource materials in this competency.
 
->Focus on developing through on-the-job experience;
->You understand and can discuss terminology, concepts, principles and issues related to this competency;
->You utilize the full range of reference and resource materials in this competency.
+Learning focus:
+- on developing through practice or on-the-job experience.
 
 ### Intermediate
->You are able to successfully complete tasks in this competency as requested. Help from an expert may be required from time to time, but you can usually perform the skill independently.
+Learning milestones:  
+- You are able to successfully complete tasks in this competency as requested;  
+- Help from an expert may be required from time to time, but you can usually perform the skill independently;  
+- You have applied this competency to situations occasionally while needing minimal guidance to perform successfully;  
+- You understand and can discuss the application and implications of changes to processes, policies, and procedures in this area.
 
->Focus is on applying and enhancing knowledge or skill;
->You have applied this competency to situations occasionally while needing minimal guidance to perform successfully;
->You understand and can discuss the application and implications of changes to processes, policies, and procedures in this area.
+Learning focus: 
+- applying and enhancing knowledge or skill;
 
-### Independent
->You can perform the actions associated with this skill without assistance. You are certainly recognized within your immediate organization as "a person to ask" when difficult questions arise regarding this skill.
+### Independent 
+Learning milestones:  
+- You can perform the actions associated with this skill without assistance;
+- You have consistently provided practical/relevant ideas and perspectives on process or practice improvements which may easily be implemented;  
+- You are capable of coaching others in the application of this competency by translating complex nuances relating to this competency into easy to understand terms;  
+- You participate in senior level discussions regarding this competency;  
+- You are certainly recognized within your immediate organization as "a person to ask" when difficult questions arise regarding this skill;
+- You assist in the development of reference and resource materials in this competency.
 
->Focus is on broad organizational/professional issues;
->You have consistently provided practical/relevant ideas and perspectives on process or practice improvements which may easily be implemented;
->You are capable of coaching others in the application of this competency by translating complex nuances relating to this competency into easy to understand terms;
->You participate in senior level discussions regarding this competency;
->You assist in the development of reference and resource materials in this competency.
+Learning focus:  
+- improve competence in broad organizational/professional issues.
 
-### Master-Expert
->You are known as an expert in this area. You can provide guidance, troubleshoot and answer questions related to this area of expertise and the field where the skill is used.
+### Master, Expert or Instructor
+Learning milestones:  
+- You are known as an expert in this area;  
+- You are considered the “go to” person in this area within your organization and beyond;
+- You have demonstrated consistent excellence in applying this competency across multiple projects and/or organizations;
+- You create new applications for and/or lead the development of reference and resource materials for this competency;
+- You can provide guidance, troubleshoot and answer questions related to this area of expertise and the field where the skill is used.
 
->Focus is strategic;
->You have demonstrated consistent excellence in applying this competency across multiple projects and/or organizations;
->You are considered the “go to” person in this area within NIH and/or outside organizations;
->You create new applications for and/or lead the development of reference and resource materials for this competency;
->You are able to diagram or explain the relevant process elements and issues in relation to organizational issues and trends in sufficient detail during discussions and presentations, to foster a greater understanding among internal and external colleagues and constituents.
+Learning focus:
+- strategic;  
+- contribute to the innovation of the area or field.
+
+## Academic qualification
+
+The framework recommends the level per area/domain required at three tiers of academic qualification (Bachelor, Master, PhD) in degrees recognised by NFDI4Objects [TOPIC TO DEVELOP].
+

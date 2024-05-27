@@ -138,7 +138,7 @@ Seeks or collects and synthesizes information from a variety of stakeholders and
 
 ### Definitions on *knowledge* and *skill* dimensions
 
-Within each competency domain, grouped per competency area, a bullet-point definition of the expected knowledge and skills at each proficiency level. Requirements are noted to be cumulative; i.e. a proficiency level requires all knowledge and skills required at lower levels.
+Within each competency domain, grouped per competency area, a bullet-point definition is given for the expected knowledge and skills at each proficiency level. Requirements are noted to be cumulative; i.e. a proficiency level requires all knowledge and skills required at lower levels.
 
 ::: {.callout-note icon="false"}
 ### Example: Competency Area 1 *Data Generation* - Domain 1 *Data management planning* - Level 2 Novice Practicioner {.unnumbered}
