@@ -36,16 +36,16 @@ The Framework is structured around four competency areas or “pillars” reflec
 
 Within each domain, the Framework sets out the three competency dimensions (subject **knowledge**, practical **skills** and personal **attitudes**), which are the determinants of overall **competence**.
 
-## Levels
+## Proficiency levels
 
-Each domain contains **five** designated proficiency **levels** (ranging from learner-beginner to master-expert practitioner), which describe the incremental levels of proficiency by reference to a set of described technical–professional tasks that are specific, measurable and role relevant and which will determine the level of proficiency achieved by an individual or required for a specific position.
+Each domain contains **five** designated proficiency levels (ranging from learner-beginner to master-expert practitioner), which describe the incremental levels of proficiency by reference to a set of described technical–professional tasks that are specific, measurable and role relevant.
 
 ### Beginner
 Learning milestones:  
 - Fundamental awareness; 
 - You have a common knowledge or an understanding of basic techniques and concepts, gained in generic introductory courses or references.
 
-Learning focus:
+Learning focus:  
 - on improving more specialised knowledge and skills through specialised courses and references.
 
 ### Novice
@@ -55,7 +55,7 @@ Learning milestones:
 - You understand and can discuss terminology, concepts, principles and issues related to this competency;
 - You utilize the full range of reference and resource materials in this competency.
 
-Learning focus:
+Learning focus:  
 - on developing through practice or on-the-job experience.
 
 ### Intermediate
@@ -65,7 +65,7 @@ Learning milestones:
 - You have applied this competency to situations occasionally while needing minimal guidance to perform successfully;  
 - You understand and can discuss the application and implications of changes to processes, policies, and procedures in this area.
 
-Learning focus: 
+Learning focus:  
 - applying and enhancing knowledge or skill;
 
 ### Independent 
@@ -88,11 +88,11 @@ Learning milestones:
 - You create new applications for and/or lead the development of reference and resource materials for this competency;
 - You can provide guidance, troubleshoot and answer questions related to this area of expertise and the field where the skill is used.
 
-Learning focus:
+Learning focus:  
 - strategic;  
 - contribute to the innovation of the area or field.
 
 ## Academic qualification
 
-The framework recommends the level per area/domain required at three tiers of academic qualification (Bachelor, Master, PhD) in degrees recognised by NFDI4Objects [TOPIC TO DEVELOP].
+The framework recommends the level per area/domain required at three tiers of academic qualification (Bachelor, Master, PhD) in degrees considered RDM-focused by NFDI4Objects [TOPIC TO DEVELOP].
 
