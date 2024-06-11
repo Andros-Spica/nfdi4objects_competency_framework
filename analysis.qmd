@@ -16,6 +16,60 @@ ianus <- IANUS_loadJSONs(directory = directory)
 ```
 
 ```{r, echo=FALSE}
+# format semester variable
+semester_name_in_order <- c(
+  "WiSe 2014/15","SoSe 2015", "WiSe 2015/16", "SoSe 2016", "WiSe 2016/17", 
+  "SoSe 2017", "WiSe 2017/18", "SoSe 2018","WiSe 2018/19", "SoSe 2019", 
+  "WiSe 2019/20", "SoSe 2020", "WiSe 2020/21", "SoSe 2021", "WiSe 2021/22", 
+  "SoSe 2022", "WiSe 2022/23", "SoSe 2023")
+
+ianus$Semester <- factor(ianus$Semester, levels = semester_name_in_order, ordered = TRUE)
+
+# format name of organisation/centre
+ianus$Einrichtung <- gsub("\n", "", ianus$Einrichtung)
+
+# Group all associated to Humboldt-Universität zu Berlin
+ianus$Einrichtung <- gsub("Humboldt Universität Berlin,Berlin-Brandenburgische Akademie der Wissenschaften",
+                          "Humboldt-Universität zu Berlin",
+                          ianus$Einrichtung)
+ianus$Einrichtung <- gsub("Humboldt-Universität zu Berlin und Berlin-Brandenburgische Akademie der Wissenschaften",
+                          "Humboldt-Universität zu Berlin",
+                          ianus$Einrichtung)
+ianus$Einrichtung <- gsub("Humboldt Universität Berlin, Ägyptisches Museum",
+                          "Humboldt-Universität zu Berlin",
+                          ianus$Einrichtung)
+ianus$Einrichtung <- gsub("Humboldt Universität Berlin",
+                          "Humboldt-Universität zu Berlin",
+                          ianus$Einrichtung)
+```
+
+IANUS lehrangebote dataset (2014-2023, n=`{r} nrow(ianus)`):
+
+```{r, echo=FALSE, fig.height=9, fig.width=7}
+centre_freq_sorted <- sort(table(factor(ianus$Einrichtung)), decreasing = FALSE)
+
+par(mar = c(0, 15, 0, 2) + 0.2, cex.axis = 0.7)
+
+barplot(centre_freq_sorted, 
+    las = 2,
+    horiz = TRUE,
+    xaxt = "n",
+    space = 0
+    )
+
+x_pos = ifelse(centre_freq_sorted > 100, centre_freq_sorted - 2, centre_freq_sorted + 8)
+
+text(x_pos, seq(0.5, nrow(centre_freq_sorted) + 0.5, by = 1),
+     adj = 1,
+     labels = paste(centre_freq_sorted),
+     cex = 0.65)
+```
+
+```{r, echo=FALSE}
+plot(ianus$Semester, ylab = "Frequency")
+```
+
+```{r, echo=FALSE}
 # Add extra variables with processed keywords and DLM tags
 # identify all content keywords
 source(file = "source/IANUS_catchKeywords.R")
@@ -81,8 +135,6 @@ wordcloud(words = names(keyword_freq_sorted), freq = keyword_freq_sorted, min.fr
 cutThreshold = length(keyword_freq_sorted[is_RDM]) # no cutting
 RDMkeywords_top <- (keyword_freq_sorted[is_RDM])[1:cutThreshold]
 
-colorSet <- c("lightblue","darkred")
-
 par(mar = c(7, 4, 2, 2) + 0.2, cex.axis = 0.7)
 
 barplot(RDMkeywords_top, 
@@ -107,6 +159,7 @@ wordcloud(words = names(keyword_freq_sorted)[is_RDM], freq = keyword_freq_sorted
           scale = c(2, .3),
           colors=brewer.pal(8, "Set1"))
 ```
+
 
 ## Notes
 
