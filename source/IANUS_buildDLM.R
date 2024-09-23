@@ -4,7 +4,7 @@ IANUS_buildDLM <- function(keywords)
   
   dlm_phases <- c("Data creation", "Data processing and storage", "Data usage", "Data archiving", "Data destruction")
   
-  keywordToDLM <- read.csv("data/keywordToDLM.csv")
+  keywordToDLM <- read.csv("../data/keywordToDLM.csv")
   
   DLM <- as.list(rep(NA, length(keywords)))
   for (i in 1:length(keywords))

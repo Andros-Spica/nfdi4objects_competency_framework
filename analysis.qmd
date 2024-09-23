@@ -1,7 +1,7 @@
 # Analysis
 
 ```{r, echo=FALSE}
-directory = "data/lehrangebote"
+directory <- "data/lehrangebote"
 ```
 
 ```{r}
@@ -155,9 +155,9 @@ set.seed(7)
 
 par(mar = rep(0, 4))
 wordcloud(words = names(keyword_freq_sorted)[is_RDM], freq = keyword_freq_sorted[is_RDM], min.freq = 1,
-          max.words=200, random.order=FALSE, rot.per=0.35, 
+          max.words = 200, random.order = FALSE, rot.per = 0.35, 
           scale = c(2, .3),
-          colors=brewer.pal(8, "Set1"))
+          colors = brewer.pal(8, "Set1"))
 ```
 
 
