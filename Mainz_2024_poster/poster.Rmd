@@ -1,0 +1,257 @@
+---
+title: Research Data Management Competency Framework
+author:
+  - name: Andreas Angourakis
+    orcid: 0000-0002-9946-8142
+    email: Andreas.Angourakis@ruhr-uni-bochum.de
+    twitter: AndrosSpica
+    affil: 1,3
+  - name: Henrike Backhaus
+    orcid: 0000-0002-8793-4185
+    email: henrike.backhaus@hs-mainz.de
+    affil: 2
+  - name: Kai-Christian Bruhn
+    orcid: 0000-0001-8322-1260
+    email: kai-christian.bruhn@hs-mainz.de
+    affil: 2
+  - name: Tim Klingenberg
+    email: tim.klingenberg@rub.de
+    affil: 1
+affiliation: 
+  - num: 1
+    address: Institut für Archäologische Wissenschaften, Ruhr-Universität Bochum
+    url: https://www.ruhr-uni-bochum.de/archaeologie
+  - num: 2
+    address: Hochschule Mainz, Mainz University of Applied Sciences
+    url: https://www.hs-mainz.de/
+  - num: 3
+    address: Archäologisches Institut, Universität zu Köln
+main_findings:
+  - "- Competency area 1: Data Generation
+  - Competency area 2: Data Processing
+  - Competency area 3: Data Analysis
+  - Competency area 4: Data Usage"
+  - '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png){.main_pic}'
+logoleft_name: '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/qr-code-black.png){.main-img-left}'
+logoright_name: '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png){.main-img-right}'
+output: 
+  posterdown::posterdown_betterland:
+    self_contained: false
+    pandoc_args: --mathjax
+    highlight: haddock
+    number_sections: false
+link-citations: true
+bibliography: ../references.bib
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(results = 'asis',
+                      echo = FALSE,
+                      warning = FALSE,
+                      tidy = FALSE,
+                      message = FALSE,
+                      fig.align = 'center',
+                      out.width = "100%")
+options(knitr.table.format = "html") 
+```
+
+```{r}
+areas <- c("Data Generation", "Data Processing", "Data Analysis", "Data Usage")
+domains <- c("Data management planning", "Data creation", "Data collection", "Data maintenance",
+             "Data entry", "Data verification", "Data transformation",
+             "Descriptive analysis", "Explanatory analysis", "Predictive analysis",
+             "Data interpretation", "Data presentation")
+areasPerDomain <- c(rep("Data Generation", 4),
+                    rep("Data Processing", 3),
+                    rep("Data Analysis", 3),
+                    rep("Data Usage", 2))
+dimensions <- c("Knowledge", "Skills")#, "Attitudes")
+proficiency_levels <- c("Beginner", "Novice", "Intermediate", "Independent", "Expert")
+
+num_cells <- length(domains) * length(dimensions) * length(proficiency_levels)
+
+framework_data <- expand.grid(
+  domain = domains,
+  dimension = dimensions,
+  proficiency_level = proficiency_levels
+)
+
+framework_data$area <- sapply(framework_data$domain, function(x){areasPerDomain[x == domains]} )
+
+framework_data$area <- factor(framework_data$area, levels = areas)
+framework_data$domain <- factor(framework_data$domain, levels = domains)
+framework_data$proficiency_level <- factor(framework_data$proficiency_level, levels = proficiency_levels)
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(framework_data, aes(x = dimension, y = domain, fill = proficiency_level)) +
+  geom_tile(color = "white") +
+  facet_wrap(~ area, scales = "free_y") +  # Separate by Area
+  scale_fill_viridis_d(option = "C") +     # Use a color palette
+  theme_minimal() +
+  labs(
+    title = "Framework Structure",
+    x = "Dimension",
+    y = "Domain",
+    fill = "Proficiency Level"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(framework_data, aes(x = dimension, fill = proficiency_level)) +
+  geom_bar(position = "fill") +
+  facet_wrap(~ domain + area, scales = "free_y") +
+  theme_minimal() +
+  labs(
+    title = "Framework Structure by Domain, Dimension, and Proficiency Level",
+    x = "Dimension",
+    y = "Proportion of Proficiency Levels",
+    fill = "Proficiency Level"
+  )
+```
+
+```{r}
+library(ggmosaic)
+library(ggplot2)
+
+framework_data$domain <- factor(framework_data$domain, levels = rev(domains))
+
+area_divisors <- c(2, 2 + 3, 2 + 3 + 3, 2 + 3 + 3 + 4) * (1 / length(domains))
+
+framework_plot <- ggplot(data = framework_data) +#[framework_data$area == areas[1], ]) +
+  geom_mosaic(aes(x = product(proficiency_level, domain, dimension), fill = domain, alpha = proficiency_level), show.legend = FALSE) +
+  theme_mosaic()
+
+for (area in areas) {
+  areaIndex <- which(area == areas)
+  numDomainInArea <- length(areasPerDomain[areasPerDomain == area])
+  framework_plot <- framework_plot +
+    geom_hline(yintercept =  area_divisors[areaIndex]) +
+    annotate("text", x = -0.8, y = - (0.2 + numDomainInArea) + 1 / areaIndex, label = sub(" ", "\n", area),
+             color="red")
+}
+
+framework_plot <- framework_plot +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)) + 
+  #facet_wrap(~ area, ncol = 1, scales = "free_y") +
+  labs(y = "", x = "") +
+  coord_cartesian(xlim = c(0, 1), clip = "off")
+
+framework_plot
+```
+
+```{r}
+library(networkD3)
+
+# Create nodes
+nodes <- data.frame(name = c(areas, domains, 
+                             dimensions, 
+                             proficiency_levels
+                             ))
+
+# Create links between areas, domains, dimensions, and proficiency levels
+links <- data.frame(
+  source = c(0, 0, 0, 0,  # Data Generation links to its domains
+             1, 1, 1,     # Data Processing links to its domains
+             2, 2, 2,     # Data Analysis links to its domains
+             3, 3,       # Data Usage links to its domains
+             sort(rep(4:15, 5)) # Domains to levels
+             #sort(rep(4:15, 3))#, # Domains to dimensions
+  ),
+  target = c(4:15, # areas to domains
+             #rep(16:18, 12), # Domains to dimensions
+             rep(16:20, 12) # Domains to levels
+  ),
+  # Values representing flow size
+  value = c(rep(10, 12), rep(5, 12))
+)
+
+# Generate Sankey plot
+sankeyNetwork(Links = links, Nodes = nodes, Source = "source", Target = "target", 
+              Value = "value", NodeID = "name", units = "TWh", fontSize = 12, nodeWidth = 30)
+
+```
+
+
+```{r myplot, include=FALSE}
+svg('mydiagram.svg')
+plot(iris$Sepal.Length, iris$Sepal.Width)
+dev.off()
+```
+
+```{r, include=FALSE}
+knitr::write_bib(c('posterdown', 'rmarkdown','pagedown'), 'packages.bib')
+```
+
+# Introduction
+
+NFDI4Objects Task Area 6 "Commons and Qualification" aims to define a **Research Data Management Competency Framework (NFDI4Objects-RDMCF)** that address the particularities of dealing with data regarding the study of the past through its material remains. The NFDI4Objects-RDMCF is to be offered to the broader community of practitioners, instructors and managers as reference and recommendation.
+
+## Current contents
+
+At this point, we offer a tentative framework structure derived from a comparative synthesis of **existing frameworks** and the scope of a **sample of courses** lectured in Germany, between winter 2014/15 and summer 2023, based on IANUS (Lehrangebote) dataset. The further development and fine-tuning of competency domains and profiles will be perform with **direct feedback from other activities and experts in the NFDI4Objects consortium**.
+
+## Open and reproducible document
+
+The development process and documentation of the NFDI4Objects-RDMCF is kept as a **HTML Quarto Book** in _**perpetual beta state**_.
+
+We call any NFDI4Objects participant or community member interested in contributing to access the repository, register and engage!  
+
+[https://gitlab.rlp.net/n4o/competence_framework]((https://gitlab.rlp.net/n4o/competence_framework))
+
+# Document structure
+
+- Introduction
+- Part A: Current state
+  - Existing courses and trainee programmes
+```{r, echo=FALSE}
+knitr::include_graphics("existing_courses_table.png")
+```
+  - Analysis
+```{r, echo=FALSE}
+directory <- "../data/lehrangebote"
+library(wordcloud)
+source(file = "../source/IANUS_loadJSONs.R")
+ianus <- IANUS_loadJSONs(directory = directory)
+
+# Add extra variables with processed keywords and DLM tags
+# identify all content keywords
+source(file = "../source/IANUS_catchKeywords.R")
+ianus$Keywords <- IANUS_catchKeywords(ianus)
+
+keywords_unique <- unique(unlist(ianus$Keywords))
+
+# assign DLM tags according to keywords
+source(file = "../source/IANUS_buildDLM.R")
+ianus$DLM <- IANUS_buildDLM(ianus$Keywords)
+
+keywords_unlisted <- unlist(ianus$Keywords)
+keywords_unlisted <- keywords_unlisted[keywords_unlisted != "NA"]
+keyword_freq_sorted <- sort(table(keywords_unlisted), decreasing = TRUE)
+
+set.seed(123)
+par(mar = rep(0, 4))
+wordcloud(words = names(keyword_freq_sorted), freq = keyword_freq_sorted, min.freq = 1,
+          max.words=200, random.order=FALSE, rot.per=0.35, 
+          scale = c(3, .3),
+          colors=brewer.pal(8, "Set1"))
+```
+- Part B: Derivation of the competence framework
+  - Existing Frameworks
+    - @NIH_competencies_2017
+    - @who-dmcf
+    - @schuller_future_2019
+    - @petersen_lernzielmatrix_2023
+  - Comparative synthesis of existing frameworks
+- PART C: NFDI4Objects Competency Framework
+  - Framework structure and components  
+  <strong style="font-size: 150%;">&larr; (chapters per Competency Area)</strong> 
+  - Attitudes
+- Recommendations
+
+# References
