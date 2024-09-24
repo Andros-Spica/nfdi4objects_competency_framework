@@ -8,15 +8,14 @@ author:
     affil: 1,3
   - name: Henrike Backhaus
     orcid: 0000-0002-8793-4185
-    email: henrike.backhaus@hs-mainz.de
     affil: 2
   - name: Kai-Christian Bruhn
     orcid: 0000-0001-8322-1260
-    email: kai-christian.bruhn@hs-mainz.de
     affil: 2
   - name: Tim Klingenberg
-    email: tim.klingenberg@rub.de
     affil: 1
+  - name: Constance von Rüden
+    affil: 1 
 affiliation: 
   - num: 1
     address: Institut für Archäologische Wissenschaften, Ruhr-Universität Bochum
@@ -28,11 +27,11 @@ affiliation:
     address: Archäologisches Institut, Universität zu Köln
 main_textsize: "120px"
 main_findings:
-  - "Towards a better **qualification** system based on NFDI4Objects **community** assets     
+  - "Towards a better **qualification** system based on NFDI4Objects **community** expertise     
   ![](framework_plot.svg){.main_pic}  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NFDI4**Objects**"
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NFDI4**Objects - TA6**"
 logoleft_name: '![](https://www.nfdi4objects.net/wp-content/uploads/2021/09/nfdi4objects_logo_bildmarke_weiss_digital.svg){.main-img-left}'
-logoright_name: '![](hovercode.svg){.main-img-right}'
+logoright_name: '![](qr-code.svg){.main-img-right}'
 output: 
   posterdown::posterdown_betterland:
     self_contained: false
@@ -42,6 +41,8 @@ output:
 knit: pagedown::chrome_print # comment this out for HTML output (faster)
 link-citations: true
 bibliography: ../references.bib
+nocite: |
+  @ianus
 ---
 
 ```{css, echo=FALSE}
@@ -102,9 +103,17 @@ dimension_label_xpos <- c(0.25, 0.75)
 
 framework_plot <- ggplot(data = framework_data) +
   geom_mosaic(aes(x = product(proficiency_level, domain, dimension), fill = domain, alpha = proficiency_level), show.legend = FALSE) +
-  theme_mosaic()
+  theme_mosaic() +
+  geom_hline(yintercept =  0, color = "white") +
+  annotate("text", x = -0.5, y = 0.5, angle = 90, label = "Domains",
+             color = "white", size = 5, fontface = "bold.italic") +
+  annotate("text", x = 0.5, y = -0.28, label = "Proficiency Levels",
+             color = "white", size = 5, fontface = "bold.italic")
 
-shift <- 0
+framework_plot <- framework_plot +
+  annotate("text", x = 1.45, y = 0.5, angle = 270, label = "Areas",
+             color = "white", size = 5, fontface = "bold.italic")
+
 for (area in areas) {
   areaIndex <- which(area == areas)
   ypos <- 1 - area_label_ypos[areaIndex]
@@ -113,6 +122,10 @@ for (area in areas) {
     annotate("text", x = 1.2, y = ypos, label = sub(" ", "\n", area),
              color = "white", size = 5, fontface = "bold")
 }
+
+framework_plot <- framework_plot +
+  annotate("text", x = 0.5, y = 1.15, label = "Dimensions",
+             color = "white", size = 5, fontface = "bold.italic")
 
 for (dimension in dimensions) {
   dimensionIndex <- which(dimension == dimensions)
@@ -123,6 +136,7 @@ for (dimension in dimensions) {
 }
 
 framework_plot <- framework_plot +
+  geom_vline(xintercept =  .5, color = "white") +
   scale_x_productlist(labels = rep(proficiency_levels, 2)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, colour = "white", size = 8),
         axis.text.y = element_text(colour = "white", size = 8),
@@ -145,19 +159,20 @@ knitr::write_bib(c('posterdown', 'rmarkdown','pagedown'), 'packages.bib')
 
 # Introduction
 
-NFDI4Objects Task Area 6 "Commons and Qualification" aims to define a **Research Data Management Competency Framework (NFDI4Objects-RDMCF)** that address the particularities of dealing with data regarding the study of the past through its material remains. The NFDI4Objects-RDMCF is to be offered to the broader community of practitioners, instructors and managers as reference and recommendation.
+NFDI4Objects Task Area 6, "Commons and Qualification," aims to create a **Research Data Management Competency Framework (Kompetenzrahmen)** specifically for handling data related to studying the past through its material remains. The NFDI4Objects-RDMCF will be shared with practitioners, educators, and managers as a guide for shaping training programs and job descriptions.
 
-## Current contents
+## The framework: present and future
 
-At this point, we offer a tentative framework structure derived from a comparative synthesis of **existing frameworks** and the scope of a **sample of courses** lectured in Germany, between winter 2014/15 and summer 2023, based on IANUS (Lehrangebote) dataset. The further development and fine-tuning of competency domains and profiles will be perform with **direct feedback from other activities and experts in the NFDI4Objects consortium**.
+We have developed a tentative framework structure by comparing **existing frameworks** and examining a selection of courses taught in Germany from winter 2014/15 to summer 2023 from the **IANUS (Lehrangebote) dataset** [@schmidt_scschmidtarchit-lv_analysis_2024]. This framework defines **competency cells** as the intersection of areas/domains, proficiency levels, and dimensions. These competency cells can be used to create **competency profiles** for courses, degrees, positions, and individuals (e.g., as a descriptor on a CV). We plan to further refine the competency cells and profiles with **feedback** from other activities and experts in the NFDI4Objects consortium.
 
 ## Open and reproducible document
 
-The development process and documentation of the NFDI4Objects-RDMCF is kept as a **HTML Quarto Book** in _**perpetual beta state**_.
+The NFDI4Objects-RDMCF is kept as a **HTML Quarto Book** in _**perpetual beta state**_.
 
+---
 We call any NFDI4Objects participant or community member interested in contributing to access the repository, register and engage!  
-
-[https://gitlab.rlp.net/n4o/competence_framework]((https://gitlab.rlp.net/n4o/competence_framework))
+**[https://gitlab.rlp.net/n4o/competence_framework]((https://gitlab.rlp.net/n4o/competence_framework))**
+---
 
 # Document structure
 
