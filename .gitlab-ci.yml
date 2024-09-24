@@ -11,7 +11,7 @@ before_script:
   - curl -L -o quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb
   - dpkg -i quarto.deb && rm -f quarto.deb
   - quarto install --no-prompt extension quarto-ext/lightbox
-  - Rscript -e "install.packages(c('rmarkdown', 'rjson', 'jsonlite', 'readODS', 'DT', 'wordcloud', 'stringi', 'crosstalk'), dependencies = TRUE)"
+  - Rscript -e "install.packages(c('rmarkdown', 'rjson', 'jsonlite', 'readODS', 'DT', 'wordcloud', 'stringi', 'crosstalk', 'ggplot2', 'ggmosaic'), dependencies = TRUE)"
 
 pages:
   script:
