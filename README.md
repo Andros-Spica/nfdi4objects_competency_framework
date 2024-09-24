@@ -8,6 +8,8 @@ The present document is an outcome of [NFDI4Objects](https://www.nfdi4objects.ne
 
 See booklet at https://n4o.pages.gitlab.rlp.net/competence_framework
 
+![Framework matrix and example of competency profile](figs/framework_plot_profile.png)
+
 ## References
 
 ### Data sources about current offer of courses in Germany
@@ -45,18 +47,7 @@ Unless otherwise specified on particular materials, all material in this reposit
 
 ## Citation
 
-Please cite this work as follows:
-
-```{bibtex}
-@article{QualificationProfilesNFDI4Objects,
-  title={Qualification Profiles for Research Data Management on the Material Remains of Human History (NFDI4Objects)},
-  author={NFDI4Objects-TA 6 team},
-  journal={GitLab},
-  year={2024},
-  doi={},
-  url={}
-}
-```
+For citation details, refer to [CITATION.cff](CITATION.cff).
 
 ## Acknowledgements
 
@@ -71,7 +62,3 @@ Contributors (in alphabetical order by last name). Collectively the "NFDI4Object
 - Bruhn, Kai-Christian (Hochschule Mainz, Mainz University of Applied Sciences)
 - Klingenberg, Tim (Institut für Archäologische Wissenschaften, Ruhr-University Bochum)
 - Linde, Lennart (Hochschule Mainz, Mainz University of Applied Sciences)
-
-## Contact
-
-(ADD A STABLE CONTACT OR CONTACTS DETAILS)
