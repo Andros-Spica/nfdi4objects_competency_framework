@@ -39,6 +39,7 @@ output:
     pandoc_args: --mathjax
     highlight: haddock
     number_sections: false
+knit: pagedown::chrome_print # comment this out for HTML output (faster)
 link-citations: true
 bibliography: ../references.bib
 ---
