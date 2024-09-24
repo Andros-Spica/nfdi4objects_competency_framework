@@ -1,0 +1,26 @@
+cff-version: 1.0.0
+message: Please cite it using these metadata.
+title: NFDI4Objects Research Data Management Competency Framework
+abstract: The present document is an outcome of NFDI4Objects Task Area 6 "Commons and Qualification", which aims to define a **Research Data Management Competency Framework** that address the particularities of dealing with data regarding the study of the past through its material remains. The profiles contained in this framework are derived from the other activities and experts in the consortium and formulated both as reference and recommendation.
+authors:
+  - family-names: Angourakis
+    given-names: Andreas
+    orcid: "https://orcid.org/0000-0002-9946-8142"
+  - family-names: Backhaus
+    given-names: Henrike
+    orcid: "https://orcid.org/0000-0002-8793-4185"
+  - family-names: Bruhn
+    given-names: Kai-Christian
+    orcid: "https://orcid.org/0000-0001-8322-1260"
+  - family-names: Klingenberg
+    given-names: Tim
+  - family-names: Linde
+    given-names: Lennart
+version: 0.1.0
+date-released: "2024-09-24"
+identifiers:
+  - description: release 0.1.0 in Zenodo
+    type: doi
+    value: "10.5281/zenodo.123456"
+license: BSD and CC-BY 4.0
+repository-code: "https://gitlab.rlp.net/n4o/competence_framework"
