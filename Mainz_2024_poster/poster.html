@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>Research Data Management Competency Framework</title>
+
+
+
+
+
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+<link href='https://fonts.googleapis.com/css?family=Special Elite' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Rasa' rel='stylesheet'>
+
+<!--
+Here are the required style attributes for css to make this poster work :)
+-->
+<style>
+@page {
+size: 46in 32in;
+margin: 0;
+padding: 0;
+background-color: #ffffff;
+}
+body {
+margin: 0px;
+padding: 0px;
+width: 46in;
+height: 32in;
+text-align: justify;
+font-size: 45px;
+background-color: #FFFFFF;
+color: #000000;
+}
+/* RMarkdown Class Styles */
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+/* align-items: center; */
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+code {
+font-size: 25pt;
+font-family: monospace;
+background-color: #00808024;
+color: #0b4545;
+padding: 1.2mm;
+line-height: 1;
+border-radius: 2mm;
+}
+caption {
+margin-bottom: 10px;
+font-size: 20pt;
+font-style: italic;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #0b454520;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+  border-spacing: 0;
+  font-size: 40%;
+  border-style: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 1em;
+  padding-left: 1em;
+  line-height: 1em;
+}
+table {
+  margin: auto;
+}
+th {
+  padding-left: 5mm;
+  padding-right: 5mm;
+}
+.caption {
+font-size: 20pt;
+font-style: italic;
+padding-top: 0;
+}
+.references {
+font-size: 20px;
+line-height: 90%;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+float: left;
+padding: 0px;
+}
+.outer {
+width: 46in;
+height: 32in;
+-webkit-column-count: 2; /* Chrome, Safari, Opera */
+-moz-column-count: 2; /* Firefox */
+column-count: 2;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 50%;
+-moz-column-rule-width: 50%;
+column-rule-width: 50%;
+-webkit-column-rule-style: solid;
+-moz-column-rule-style: solid;
+column-rule-style: solid;
+-webkit-column-rule-color: black;
+-moz-column-rule-color: black;
+column-rule-color: black;
+-webkit-column-gap: 50%;
+background-color: #ffffff;
+font-family: Rasa;
+color: #000000;
+}
+span.citation {
+  color: #008080;
+  font-weight: bold;
+}
+a {
+text-decoration: none;
+color: #008080;
+}
+#title {
+font-size: 125pt;
+text-align: left;
+margin: 0;
+line-height: 90%;
+border-bottom: 0;
+}
+#author {
+color: #0b4545;
+margin: 0;
+line-height: 90%;
+font-size: 1.17em;
+}
+#affiliation {
+padding-top: 1em;
+color: #00000060;
+font-style: italic;
+font-size: 25px;
+margin: 0;
+}
+sup {
+color: #cc0000;
+}
+.affiliation sup {
+font-size: 20px;
+}
+.author sup {
+font-size: 30px;
+}
+.author_extra {
+color: #008080;
+margin: 0;
+line-height: 85%;
+font-size: 35px;
+}
+.outer h1 {
+text-align: center;
+margin-top: 0.5in;
+margin-bottom: 0.5in;
+}
+.outer h2 {
+text-align: center;
+}
+.outer p {
+color: #000000;
+}
+.outer ol {
+text-align: left;
+}
+.main {
+width: calc(46in / 2);
+height: 32in;
+position: absolute;
+margin-left: calc(46in / 4);
+background-color: #0b4545;
+color: #FFFFFF90;
+font-family: Special Elite;
+background-image: linear-gradient(#0b4545 50%, #008080);
+}
+.main strong {
+color: #FFFFFF;
+}
+img.main-img-left {
+width: 20%;
+left: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+img.main-img-right {
+width: 18%;
+right: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+.main p {
+padding-top: 20%;
+font-size: 120px;
+text-align: left;
+}
+.fab {
+color: #00000060;
+font-size: 25px;
+}
+.twitter, i {
+color: #00000060;
+font-size: 35px;
+text-decoration: none;
+}
+a.email {
+text-decoration: none;
+color: #00000060;
+font-size: 35px;
+}
+.envelope {
+color: #00000060;
+font-size: 5px;
+text-decoration: none;
+}
+.poster_wrap {
+width: 46in;
+height: 32in;
+padding: 0cm;
+background-color: #ffffff;
+}
+span > #tab:mytable {
+  font-weight: bold;
+}
+.section {
+  padding-left: 10mm;
+  padding-right: 10mm;
+}
+.main p {
+  padding-left: 30mm;
+  padding-right: 30mm;
+}
+.main_pic {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.orcid img {
+  width: 3%;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="column outer">
+<br>
+<div class="title section">
+<h1 id="title">Research Data Management Competency Framework</h1>
+<br>
+<h3 id="author" class="author">
+
+    </h3>
+
+<h5 id="author_extra" class="author_extra">
+Andreas Angourakis<sup>1,3, <a class="orcid" href="https://orcid.org/0000-0002-9946-8142"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup>
+ Henrike Backhaus<sup>2, <a class="orcid" href="https://orcid.org/0000-0002-8793-4185"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup>
+ Kai-Christian Bruhn<sup>2, <a class="orcid" href="https://orcid.org/0000-0001-8322-1260"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup>
+ Tim Klingenberg<sup>1</sup>
+ Constance von Rüden<sup>1</sup>
+</h5>
+
+<p id="affiliation" class="affiliation">
+<sup>1</sup> Institut für Archäologische Wissenschaften, Ruhr-Universität Bochum<br> <sup>2</sup> Hochschule Mainz, Mainz University of Applied Sciences<br> <sup>3</sup> Archäologisches Institut, Universität zu Köln
+</p>
+
+</div>
+<style type="text/css">
+.main_pic {
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+</style>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>NFDI4Objects Task Area 6, “Commons and Qualification,” aims to create a <strong>Research Data Management Competency Framework (Kompetenzrahmen)</strong> specifically for handling data related to studying the past through its material remains. The NFDI4Objects-RDMCF will be shared with practitioners, educators, and managers as a guide for shaping training programs and job descriptions.</p>
+<div id="the-framework-present-and-future" class="section level2">
+<h2>The framework: present and future</h2>
+<p>We have developed a tentative framework structure by comparing <strong>existing frameworks</strong> and examining a selection of courses taught in Germany from winter 2014/15 to summer 2023 from the <strong>IANUS (Lehrangebote) dataset</strong> <span class="citation">(<a href="#ref-schmidt_scschmidtarchit-lv_analysis_2024">Schmidt 2024</a>)</span>. This framework defines <strong>competency cells</strong> as the intersection of areas/domains, proficiency levels, and dimensions. These competency cells can be used to create <strong>competency profiles</strong> for courses, degrees, positions, and individuals (e.g., as a descriptor on a CV). We plan to further refine the competency cells and profiles with <strong>feedback</strong> from other activities and experts in the NFDI4Objects consortium.</p>
+</div>
+<div id="open-and-reproducible-document" class="section level2">
+<h2>Open and reproducible document</h2>
+<p>The NFDI4Objects-RDMCF is kept as a <strong>HTML Quarto Book</strong> in <em><strong>perpetual beta state</strong></em>.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>We call any NFDI4Objects participant or community member interested in contributing to access the repository, register and engage!</td>
+</tr>
+<tr class="even">
+<td><strong><a href="(https://gitlab.rlp.net/n4o/competence_framework)">https://gitlab.rlp.net/n4o/competence_framework</a></strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="document-structure" class="section level1">
+<h1>Document structure</h1>
+<ul>
+<li>Introduction</li>
+<li>Part A: Current state
+<ul>
+<li>Existing courses and trainee programmes
+<img src="existing_courses_table.png" width="100%" style="display: block; margin: auto;" /></li>
+<li>Analysis
+<img src="poster_files/figure-html/unnamed-chunk-6-1.png" width="100%" style="display: block; margin: auto;" /></li>
+</ul></li>
+<li>Part B: Derivation of the competence framework
+<ul>
+<li>Existing Frameworks
+<ul>
+<li><span class="citation">US National Institute of Health NIH and Office of Human Resources (<a href="#ref-NIH_competencies_2017">2017</a>)</span></li>
+<li><span class="citation">WHO Western Pacific (<a href="#ref-who-dmcf">2023</a>)</span></li>
+<li><span class="citation">Schüller, Busch ·, and Hindinger (<a href="#ref-schuller_future_2019">2019</a>)</span></li>
+<li><span class="citation">Petersen et al. (<a href="#ref-petersen_lernzielmatrix_2023">2023</a>)</span></li>
+</ul></li>
+<li>Comparative synthesis of existing frameworks</li>
+</ul></li>
+<li>PART C: NFDI4Objects Competency Framework
+<ul>
+<li>Framework structure and components<br />
+<strong style="font-size: 150%;">← (chapters per Competency Area)</strong></li>
+<li>Attitudes</li>
+</ul></li>
+<li>Recommendations</li>
+</ul>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-ianus" class="csl-entry">
+<span>“<span>IANUS</span> - <span>Forschungsdatenzentrum</span> <span>Archäologie</span> &amp; <span>Altertumswissenschaften</span>.”</span> n.d. Accessed February 20, 2024. <a href="https://ianus-fdz.de/lehrangebote/">https://ianus-fdz.de/lehrangebote/</a>.
+</div>
+<div id="ref-petersen_lernzielmatrix_2023" class="csl-entry">
+Petersen, Britta, Claudia Engelhardt, Tanja Hörner, Juliane Jacob, Tatiana Kvetnaya, Andreas Mühlichen, Hermann Schranzhofer, et al. 2023. <span>“Lernzielmatrix Zum <span>Themenbereich</span> <span>Forschungsdatenmanagement</span> (<span>FDM</span>) Für Die <span>Zielgruppen</span> <span>Studierende</span>, <span>PhDs</span> Und <span>Data</span> <span>Stewards</span>.”</span> Zenodo. <a href="https://doi.org/10.5281/zenodo.8010617">https://doi.org/10.5281/zenodo.8010617</a>.
+</div>
+<div id="ref-schmidt_scschmidtarchit-lv_analysis_2024" class="csl-entry">
+Schmidt, Sophie C. 2024. <span>“<span>SCSchmidt</span>/<span>ArchIT</span>-<span>LV</span>_analysis: Preprint.”</span> Zenodo. <a href="https://doi.org/10.5281/zenodo.10498365">https://doi.org/10.5281/zenodo.10498365</a>.
+</div>
+<div id="ref-schuller_future_2019" class="csl-entry">
+Schüller, Katharina, Paulina Busch ·, and Carina Hindinger. 2019. <span>“Future <span>Skills</span>: <span>Ein</span> <span>Framework</span> Für <span>Data</span> <span>Literacy</span>.”</span> Zenodo. <a href="https://doi.org/10.5281/zenodo.3349865">https://doi.org/10.5281/zenodo.3349865</a>.
+</div>
+<div id="ref-NIH_competencies_2017" class="csl-entry">
+US National Institute of Health NIH, and Office of Human Resources. 2017. <span>“Competencies <span>Proficiency</span> <span>Scale</span>.”</span> Text. <em>National Institutes of Health, Office of Human Resources</em>. <a href="https://web.archive.org/web/20240425101205/https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale">https://web.archive.org/web/20240425101205/https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale</a>.
+</div>
+<div id="ref-who-dmcf" class="csl-entry">
+WHO Western Pacific. 2023. <em>Data Management Competency Framework</em>. Manila: World Health Organization Regional Office for the Western Pacific. <a href="https://www.who.int/publications-detail-redirect/9789290620099">https://www.who.int/publications-detail-redirect/9789290620099</a>.
+</div>
+</div>
+</div>
+
+</div>
+<div class="main">
+<p>Towards a better <strong>qualification</strong> system based on NFDI4Objects <strong>community</strong> expertise <img src="framework_plot_profile.svg" class="main_pic" />           NFDI4<strong>Objects - TA6</strong></p>
+<img src="https://www.nfdi4objects.net/wp-content/uploads/2021/09/nfdi4objects_logo_bildmarke_weiss_digital.svg" class="main-img-left" />
+<img src="qr-code.svg" class="main-img-right" />
+</div>
+</div>
+
+
+
+</body>
+</html>

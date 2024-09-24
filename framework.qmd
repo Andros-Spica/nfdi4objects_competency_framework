@@ -1,21 +1,142 @@
 # Framework structure and components
 
-## Overview
+```{r, include=FALSE}
+library(ggmosaic)
+library(ggplot2)
+```
+
+
+```{r, include=FALSE}
+areas <- c("Data Generation", "Data Processing", "Data Analysis", "Data Usage")
+domains <- c("Data management planning", "Data creation", "Data collection", "Data maintenance",
+             "Data entry", "Data verification", "Data transformation",
+             "Descriptive analysis", "Explanatory analysis", "Predictive analysis",
+             "Data interpretation", "Data presentation")
+areasPerDomain <- c(rep("Data Generation", 4),
+                    rep("Data Processing", 3),
+                    rep("Data Analysis", 3),
+                    rep("Data Usage", 2))
+dimensions <- c("Knowledge", "Skills")#, "Attitudes")
+proficiency_levels <- c("Beginner", "Novice", "Intermediate", "Independent", "Expert")
+
+num_cells <- length(domains) * length(dimensions) * length(proficiency_levels)
+
+framework_data <- expand.grid(
+  domain = domains,
+  dimension = dimensions,
+  proficiency_level = proficiency_levels
+)
+
+framework_data$area <- sapply(framework_data$domain, function(x){areasPerDomain[x == domains]} )
+
+framework_data$area <- factor(framework_data$area, levels = areas)
+framework_data$domain <- factor(framework_data$domain, levels = domains)
+framework_data$proficiency_level <- factor(framework_data$proficiency_level, levels = proficiency_levels)
+
+framework_data$cell_pos_x <- rep(seq(from = 0, to = 0.9, length.out = length(proficiency_levels) * length(dimensions)), length(domains))
+framework_data$cell_pos_y <- rep(seq(from = 1, to = 0.08, length.out = length(domains)), each = length(proficiency_levels) * length(dimensions))
+framework_data$cell_pos_x <- framework_data$cell_pos_x + 0.5 / (length(proficiency_levels) * length(dimensions))
+framework_data$cell_pos_y <- framework_data$cell_pos_y - 0.5 / length(domains)
+ 
+set.seed(123)
+profile_selection_index <- sample(1:5, length(domains) * length(dimensions), replace = TRUE)
+profile_selection_index[16] <- 4
+profile_selection_index[17] <- 2
+profile_selection_index[18] <- 2
+profile_selection_index[19] <- 2
+profile_selection_index[20] <- 1
+profile_selection_index[21] <- 1
+profile_selection <- c()
+for (cellIndex in 0:(num_cells - 1)) {
+  profile_selection <- c(profile_selection, ((cellIndex %% 5) + 1) == profile_selection_index[((cellIndex %/% 5) + 1)] )
+}
+framework_data$profile_selection <- profile_selection
+```
+
+```{r frameworkplot, include=FALSE}
+framework_data$domain <- factor(framework_data$domain, levels = rev(domains))
+
+area_divisors <- c(2, 2 + 3, 2 + 3 + 3, 2 + 3 + 3 + 4) * (1 / length(domains))
+area_label_ypos <- c(4 / 2, 4 + 3 / 2, 4 + 3 + 3 / 2, 4 + 3 + 3 + 2 / 2) * (1 / length(domains))
+dimension_label_xpos <- c(0.25, 0.75)
+
+graphic_scale <- 2
+
+framework_plot <- ggplot(data = framework_data) +
+  geom_mosaic(aes(x = product(proficiency_level, domain, dimension), fill = domain, alpha = proficiency_level), show.legend = FALSE) +
+  theme_mosaic() +
+  geom_hline(yintercept =  0, color = "black") +
+  annotate("text", x = -0.5, y = 0.5, angle = 90, label = "Domains",
+             color = "black", size = graphic_scale * 5, fontface = "bold.italic") +
+  annotate("text", x = 0.5, y = -0.28, label = "Proficiency Levels",
+             color = "black", size = graphic_scale * 5, fontface = "bold.italic")
+
+framework_plot <- framework_plot +
+  annotate("text", x = 1.45, y = 0.5, angle = 270, label = "Areas",
+             color = "black", size = graphic_scale * 5, fontface = "bold.italic")
+
+for (area in areas) {
+  areaIndex <- which(area == areas)
+  ypos <- 1 - area_label_ypos[areaIndex]
+  framework_plot <- framework_plot +
+    geom_hline(yintercept =  area_divisors[areaIndex], color = "black") +
+    annotate("text", x = 1.2, y = ypos, label = sub(" ", "\n", area),
+             color = "black", size = graphic_scale * 5, fontface = "bold")
+}
+
+framework_plot <- framework_plot +
+  annotate("text", x = 0.5, y = 1.15, label = "Dimensions",
+             color = "black", size = graphic_scale * 5, fontface = "bold.italic")
+
+for (dimension in dimensions) {
+  dimensionIndex <- which(dimension == dimensions)
+  xpos <- dimension_label_xpos[dimensionIndex]
+  framework_plot <- framework_plot +
+    annotate("text", x = xpos, y = 1.05, label = dimension,
+             color = "black", size = graphic_scale * 5, fontface = "bold")
+}
+
+framework_plot <- framework_plot +
+  geom_vline(xintercept =  .5, color = "black") +
+  scale_x_productlist(labels = rep(proficiency_levels, 2)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, colour = "black", size = graphic_scale * 8),
+        axis.text.y = element_text(colour = "black", size = graphic_scale * 8),
+        axis.ticks = element_blank(),
+        plot.margin = unit(c(2, 6, 2, 1), "cm")
+        ) +
+  labs(y = "", x = "") +
+  coord_cartesian(xlim = c(0, 1), ylim = c(0, 1), clip = "off")
+
+svg('figs/framework_plot.svg', width = 7 * graphic_scale, height = 5 * graphic_scale)
+framework_plot
+dev.off()
+
+png('figs/framework_plot.png', width = 500 * graphic_scale, height = 360 * graphic_scale)
+framework_plot
+dev.off()
+```
+
+```{r frameworkplot_profile, include=FALSE}
+framework_plot_profile <- framework_plot +
+  geom_point(data = framework_data[framework_data$profile_selection, ], 
+             aes(x = cell_pos_x, y = cell_pos_y), shape = 4, size = graphic_scale * 2, show.legend = FALSE)
+
+svg('figs/framework_plot_profile.svg', width = 7 * graphic_scale, height = 5 * graphic_scale)
+framework_plot_profile
+dev.off()
+
+png('figs/framework_plot_profile.png', width = 500 * graphic_scale, height = 360 * graphic_scale)
+framework_plot_profile
+dev.off()
+```
 
 This Research Data Management Competency Framework is derived from existing and established frameworks (see reference sources), but was developed specifically for the NFDI4Objects consortium's expert domain, namely data from the research and conservation of material heritage.
 
-<!--![infographics](figs/infographics.png)-->
-
-The framework is a practical tool to enable research data management practitioners, instructors and managers:
-
-- to identify required data management role competencies and proficiency levels (required competency profile);
-- to identify employees’ current data management competencies and proficiency levels (actual competency profile);
-- to map the gaps that exist between required and actual competency profiles; and
-- to draft competency development plans at individual, team, department, division and organizational levels.
+![The framework matrix](figs/framework_plot.png)
 
 ## Areas, domains and dimensions
 
-The Framework is structured around four competency areas or “pillars” reflecting the four distinct stages of the data lifecycle management. Within each competency area are competency domains (**12** in total), which are a set of distinct sub-competencies for each competency area:
+The Framework is structured around four **competency areas** reflecting the four distinct stages of the data life cycle management. Within each competency area are **competency domains**, which are a group of distinct topics in each competency area:
 
 - Area 1 - **Data generation**:  
   - Domain 1 - *Data management planning*: *Data Management Plan* (DMP), *FAIR* [@wilkinson_fair_2016], *CARE* [@noauthor_care_2023], ethical self-assessment     
@@ -34,11 +155,11 @@ The Framework is structured around four competency areas or “pillars” reflec
   - Domain 1 - *Data interpretation*: synthesising data analysis, combining disparate sources and results, making qualitative inferences   
   - Domain 2 - *Data presentation and reporting*: presenting qualitative, meaningful information to non-specialists, supported by data interpretation and by use of narrative and graphical tools   
 
-Within each domain, the Framework sets out the three competency dimensions (subject **knowledge**, practical **skills** and personal **attitudes**), which are the determinants of overall **competence**.
+Within each domain, the Framework sets out the three competency dimensions (subject **knowledge**, practical **skills**), which are the determinants of overall competence. **Attitudes** are considered only as a dimension on a higher level, with definitions applied more broadly to all proficiency cells.
 
 ## Proficiency levels
 
-Each domain contains **five** designated proficiency levels (ranging from learner-beginner to master-expert practitioner), which describe the incremental levels of proficiency by reference to a set of described technical–professional tasks that are specific, measurable and role relevant.
+Each domain is described into **five** designated proficiency levels (ranging from learner-beginner to master-expert practitioner), which describe the incremental **proficiency levels** by reference to a set of described technical–professional tasks that are specific, measurable and role relevant.
 
 ### Beginner
 Learning milestones:  
@@ -91,6 +212,12 @@ Learning milestones:
 Learning focus:  
 - strategic;  
 - contribute to the innovation of the area or field.
+
+## Proficiency cells and competency profiles
+
+The intersection of areas/domains, proficiency levels, and dimensions define **competency cells** (coloured tiles in the framework matrix). By selecting different combinations of **competency cells**, one can define **competency profiles** to help organisation to design specific courses, degrees, and define technical and academic positions. For individuals, this tool can be used in career planning and CV presentation.
+
+![The framework matrix](figs/framework_plot_profile.png)
 
 ## Academic qualification
 

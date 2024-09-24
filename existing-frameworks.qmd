@@ -210,6 +210,7 @@ Given the framework definitions, the profile for a position and/or graduate can 
 ## Future Skills
 
 @schuller_future_2019
+
 The Framework "Future Skills: Ein Framework für Data Literacy" is an attempt to define a model for the structured description of behaviour(s) when working with data.
 
 In appendix C, the authors provide a differentiated Data Literacy Framework, which is divided into several "fields" of competency ("*Kompetenzfelder*"):

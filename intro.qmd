@@ -6,11 +6,20 @@ The [NFDI4Objects](https://www.nfdi4objects.net/) initiative is part of the Nati
 
 The NFDI4Objects consortium caters to the diverse needs of researchers and practitioners engaged in studying the material heritage of human and environmental history spanning millions of years. This interdisciplinary community includes professionals such as archaeologists, anthropologists, architectural historians, and various specialists in fields like archaeobotany, archaeozoology, and palaeopathology. Additionally, it involves institutions like museums, archives, and heritage agencies. NFDI4Objects encompasses the broad spectrum of material remnants from human activities, including artifacts, architectural structures, landscapes shaped by human influence, and biological/ecological remains.
 
-## Objective
+## Contents
 
 The present document is an outcome of NFDI4Objects Task Area 6 "Commons and Qualification", which aims to define a **Research Data Management Competency Framework** that address the particularities of dealing with data regarding the study of the past through its material remains. The profiles contained in this framework are derived from the other activities and experts in the consortium and formulated both as reference and recommendation.
 
 In addition, we have enveloped the main description of the framework with a brief "state-of-affairs" analysis, taking the data previously collected and curated by [IANUS](https://ianus-fdz.de/) on course offerings by German Universities, and a final general recommendation for all agents involved in promoting Research Data Management in our academic domain.
+
+## Objectives
+
+The framework is a practical tool to enable research data management practitioners, instructors and managers:
+
+- to identify required data management role competencies and proficiency levels (required competency profile);
+- to identify employees’ current data management competencies and proficiency levels (actual competency profile);
+- to map the gaps that exist between required and actual competency profiles; and
+- to draft competency development plans at individual, team, department, division and organizational levels.
 
 ## Target audiences
 
