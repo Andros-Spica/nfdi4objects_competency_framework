@@ -8,6 +8,8 @@ The present document is an outcome of [NFDI4Objects](https://www.nfdi4objects.ne
 
 See booklet at https://n4o.pages.gitlab.rlp.net/competence_framework
 
+![Framework matrix and example of competency profile](figs/framework_plot_profile.png)
+
 ## References
 
 ### Data sources about current offer of courses in Germany
@@ -60,7 +62,3 @@ Contributors (in alphabetical order by last name). Collectively the "NFDI4Object
 - Bruhn, Kai-Christian (Hochschule Mainz, Mainz University of Applied Sciences)
 - Klingenberg, Tim (Institut für Archäologische Wissenschaften, Ruhr-University Bochum)
 - Linde, Lennart (Hochschule Mainz, Mainz University of Applied Sciences)
-
-## Contact
-
-(ADD A STABLE CONTACT OR CONTACTS DETAILS)
