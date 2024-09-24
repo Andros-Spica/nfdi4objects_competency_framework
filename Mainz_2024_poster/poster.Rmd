@@ -28,7 +28,7 @@ affiliation:
 main_textsize: "120px"
 main_findings:
   - "Towards a better **qualification** system based on NFDI4Objects **community** expertise     
-  ![](framework_plot.svg){.main_pic}  
+  ![](framework_plot_profile.svg){.main_pic}  
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NFDI4**Objects - TA6**"
 logoleft_name: '![](https://www.nfdi4objects.net/wp-content/uploads/2021/09/nfdi4objects_logo_bildmarke_weiss_digital.svg){.main-img-left}'
 logoright_name: '![](qr-code.svg){.main-img-right}'
@@ -89,6 +89,25 @@ framework_data$area <- sapply(framework_data$domain, function(x){areasPerDomain[
 framework_data$area <- factor(framework_data$area, levels = areas)
 framework_data$domain <- factor(framework_data$domain, levels = domains)
 framework_data$proficiency_level <- factor(framework_data$proficiency_level, levels = proficiency_levels)
+
+framework_data$cell_pos_x <- rep(seq(from = 0, to = 0.9, length.out = length(proficiency_levels) * length(dimensions)), length(domains))
+framework_data$cell_pos_y <- rep(seq(from = 1, to = 0.08, length.out = length(domains)), each = length(proficiency_levels) * length(dimensions))
+framework_data$cell_pos_x <- framework_data$cell_pos_x + 0.5 / (length(proficiency_levels) * length(dimensions))
+framework_data$cell_pos_y <- framework_data$cell_pos_y - 0.5 / length(domains)
+ 
+set.seed(123)
+profile_selection_index <- sample(1:5, length(domains) * length(dimensions), replace = TRUE)
+profile_selection_index[16] <- 4
+profile_selection_index[17] <- 2
+profile_selection_index[18] <- 2
+profile_selection_index[19] <- 2
+profile_selection_index[20] <- 1
+profile_selection_index[21] <- 1
+profile_selection <- c()
+for (cellIndex in 0:(num_cells - 1)) {
+  profile_selection <- c(profile_selection, ((cellIndex %% 5) + 1) == profile_selection_index[((cellIndex %/% 5) + 1)] )
+}
+framework_data$profile_selection <- profile_selection
 ```
 
 ```{r frameworkplot, include=FALSE}
@@ -153,6 +172,16 @@ framework_plot
 dev.off()
 ```
 
+```{r frameworkplot_profile, include=FALSE}
+framework_plot_profile <- framework_plot +
+  geom_point(data = framework_data[framework_data$profile_selection, ], 
+             aes(x = cell_pos_x, y = cell_pos_y), shape = 4, size = 2, show.legend = FALSE)
+
+svg('framework_plot_profile.svg', width = 7, height = 7, bg = "transparent")
+framework_plot_profile
+dev.off()
+```
+
 ```{r, include=FALSE}
 knitr::write_bib(c('posterdown', 'rmarkdown','pagedown'), 'packages.bib')
 ```
@@ -198,7 +227,7 @@ keywords_unique <- unique(unlist(ianus$Keywords))
 
 # assign DLM tags according to keywords
 source(file = "../source/IANUS_buildDLM.R")
-ianus$DLM <- IANUS_buildDLM(ianus$Keywords)
+ianus$DLM <- IANUS_buildDLM(ianus$Keywords, data_dir = "../data/keywordToDLM.csv")
 
 keywords_unlisted <- unlist(ianus$Keywords)
 keywords_unlisted <- keywords_unlisted[keywords_unlisted != "NA"]
